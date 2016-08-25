@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+ul a {
+  color: #177ee6;
+}
