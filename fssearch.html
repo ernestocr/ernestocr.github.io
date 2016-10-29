@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foursquare API search</title>
+    <script src="vue.js"></script>
+  
+    <style>
+      body {
+        font-family: 'monaco', sans-serif;
+      }
+
+      input[type=text] {
+        outline: none;
+        padding: 5px;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        width: 50px;
+      }
+
+      input[type=text]:focus {
+        border-color: #177ee6;
+      }
+
+      .query {
+        width: 250px !important;
+      }
+
+      button {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 1em;
+        height: 30px;
+        position: relative;
+        top: -1px;
+      }
+
+      .results {
+        margin-top: 20px;
+      }
+
+      .results p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .results small {
+        color: #999;
+      }
+
+      .results small span {
+        color: #177ee6;
+      }
+
+      .results div {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Foursquare search</h2>
+      <input class="query" v-model='query' type="text" placeholder="coffee...">
+      <input type="text" v-model='limit' placeholder="limit">
+      <input type="text" v-model='offset' placeholder="offset">
+      <button @click="search">{{status}}</button>
+      
+      <div class="results">
+        <div v-for="venue in results.venues">
+          <p>{{venue.name}}</p>
+          <p><small>{{venue.location.formattedAddress[0]}} <span>{{venue.contact.formattedPhone}}</span></small></p>
+        </div>
+      </div>
+    </div>
+      
+    <script>
+      
+
+      let app = new Vue({
+        el: '#app',
+        data: {
+          status: 'Search',
+          query: '',
+          limit: 50,
+          offset: 0,
+          near: 'Guadalajara, Jalisco',
+          results: {
+            venues: []
+          }
+        },
+        methods: {
+          build() {
+            let id = 'VD2ZRXDRG2MBPDXKVG1IZYKSRID1SI2Z1DOS45SOTI5ZPXCE'
+            let secret = 'QUXTHFNCJSF0E0HJZKRYL5A1ISP4CG0NHRERXTBFPZ2AVUQT'
+            let url = `https://api.foursquare.com/v2/venues/search?v=20161001&client_id=${id}&client_secret=${secret}&near=${this.near}&limit=${this.limit}&offset=${this.offset}&query=${this.query}`
+            return url
+          },
+          
+          search() {
+            let url = this.build()
+            let that = this
+            this.status = 'loading...'
+
+            fetch(url).then((response) => {
+              response.json().then((data) => {
+                that.results.venues = data.response.venues
+                that.status = 'Search'
+              })
+            }).catch((err) => {
+              console.log(err)
+            })
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
