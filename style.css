@@ -16,6 +16,10 @@ ul a {
   color: #177ee6;
 }
 
+ul li {
+  margin-bottom: 10px;
+}
+
 pre {
   text-align: left;
   white-space: pre-wrap;       /* Since CSS 2.1 */
