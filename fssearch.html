@@ -73,45 +73,6 @@
       </div>
     </div>
       
-    <script>
-      
-
-      let app = new Vue({
-        el: '#app',
-        data: {
-          status: 'Search',
-          query: '',
-          limit: 50,
-          offset: 0,
-          near: 'Guadalajara, Jalisco',
-          results: {
-            venues: []
-          }
-        },
-        methods: {
-          build() {
-            let id = 'VD2ZRXDRG2MBPDXKVG1IZYKSRID1SI2Z1DOS45SOTI5ZPXCE'
-            let secret = 'QUXTHFNCJSF0E0HJZKRYL5A1ISP4CG0NHRERXTBFPZ2AVUQT'
-            let url = `https://api.foursquare.com/v2/venues/search?v=20161001&client_id=${id}&client_secret=${secret}&near=${this.near}&limit=${this.limit}&offset=${this.offset}&query=${this.query}`
-            return url
-          },
-          
-          search() {
-            let url = this.build()
-            let that = this
-            this.status = 'loading...'
-
-            fetch(url).then((response) => {
-              response.json().then((data) => {
-                that.results.venues = data.response.venues
-                that.status = 'Search'
-              })
-            }).catch((err) => {
-              console.log(err)
-            })
-          }
-        }
-      })
-    </script>
+    <script src="fssearch.min.js"></script>
   </body>
 </html>
