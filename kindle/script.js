@@ -8,7 +8,7 @@ let app = new Vue({
   },
   mounted() {
     let that = this
-    this.$http.get('/My Clippings.txt')
+    this.$http.get('My Clippings.txt')
       .then((response) => {
         that.raw = response.data
         that.clippings = that.process()
