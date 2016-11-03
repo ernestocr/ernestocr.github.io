@@ -49,8 +49,8 @@ let app = new Vue({
     filteredClippings() {
       let self = this
       return self.clippings.filter((c) => {
-        return c.title.toLowerCase().indexOf(self.search) !== -1 ||
-                c.text.toLowerCase().indexOf(self.search) !== -1
+        return c.title.toLowerCase().indexOf(self.search.toLowerCase()) !== -1 ||
+                c.text.toLowerCase().indexOf(self.search.toLowerCase()) !== -1
       })
     }
   }
