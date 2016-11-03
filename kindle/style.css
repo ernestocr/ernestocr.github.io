@@ -1,0 +1,82 @@
+body {
+  font-family: 'Droid Sans Mono', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.top {
+  border-bottom: 2px solid #eee;
+}
+
+.top .brand {
+  padding: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.status {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.2);
+}
+
+.status p {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.search input {
+  font-family: inherit;
+  outline: none;
+  border: none;
+  font-size: 0.8em;
+  width: 100%;
+  padding: 5px 0 5px 10px;
+  border-bottom: 2px solid rgba(200, 200, 200, 0.2);
+}
+
+.status p b {
+  color: #177ee6;
+}
+
+.clippings {
+  margin-top: 120px;
+  max-width: 60%;
+}
+
+.clipping {
+  margin-bottom: 35px;
+}
+
+.clipping .title {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.clipping .text {
+
+}
+
+.clipping .meta {
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .clippings {
+    max-width: 90%;
+  } 
+}
