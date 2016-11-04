@@ -25,6 +25,16 @@
         </div>
       </div>
 
+      <div class="authors">
+        <p>List of authors</p>
+        <ul>
+          <li
+            v-bind:class="{ active: search == name }"
+            v-for="name in authors"
+            @click="viewAuthor(name)">{{name}}</li>
+        </ul>
+      </div>
+
       <div class="clippings">
         <ul>
           <li class="clipping" v-for="clipping in filteredClippings">

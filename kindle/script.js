@@ -4,7 +4,8 @@ let app = new Vue({
     raw: '',
     clippings: [],
     search: '',
-    loading: true
+    loading: true,
+    authors: []
   },
   mounted() {
     let that = this
@@ -12,12 +13,30 @@ let app = new Vue({
       .then((response) => {
         that.raw = response.data
         that.clippings = that.process()
+        that.authors = that.setAuthors()
         that.loading = false
       }, (response) => {
         console.log('There was an error loading the text file.')
       })
   },
   methods: {
+    viewAuthor(a) {
+      this.search = a
+      scroll(0,0)
+    },
+    setAuthors() {
+      let authors = []
+      this.clippings.forEach((c) => {
+        let regExp = /\(([^)]+)\)/
+        let matches = regExp.exec(c.title)
+        if ( matches != null ) {
+          if ( !authors.includes(matches[1]) ) {
+            authors.push(matches[1])
+          }
+        }
+      })
+      return authors
+    },
     process() {
       let data = this.raw.split('==========').reverse()
       let clippings = []
