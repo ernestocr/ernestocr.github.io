@@ -3678,3 +3678,298 @@ Don Quixote (Miguel de Cervantes Saavedra)
 
 for it is still some comfort in misfortune to find one who can feel for it.
 ==========
+How To Be A 3% Man, Winning The Heart Of The Woman Of Your Dreams (Wayne, Corey)
+- Your Highlight on page 146 | Location 2238-2238 | Added on Thursday, December 28, 2017 4:55:52 PM
+
+Remember, it’s a scientific fact that women are more attracted to men whose feelings are unclear.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 2 | Location 106-107 | Added on Tuesday, January 2, 2018 11:12:01 PM
+
+“There is no logical path to these laws; only intuition, resting on a sympathetic understanding of experience, can reach them.”
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 2 | Location 107-108 | Added on Tuesday, January 2, 2018 11:13:08 PM
+
+What is the purpose behind the search for scientific laws, in any field? Clearly, it’s divination—foretelling the future, and controlling
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 2 | Location 107-108 | Added on Tuesday, January 2, 2018 11:13:14 PM
+
+What is the purpose behind the search for scientific laws, in any field? Clearly, it’s divination—foretelling the future, and controlling it.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 3 | Location 117-118 | Added on Tuesday, January 2, 2018 11:15:02 PM
+
+The subject is an interdisciplinary mix of physics-inspired models, mathematical techniques, and computer science, all aimed at the valuation of financial securities.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 3 | Location 118-121 | Added on Tuesday, January 2, 2018 11:15:30 PM
+
+The best quantitative finance brings real insight into the relation between value and uncertainty, and it approaches the quality of real science; the worst is a pseudoscientific hodgepodge of complex mathematics used with obscure justification.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Note on page 3 | Location 120 | Added on Tuesday, January 2, 2018 11:16:10 PM
+
+Beautifully said.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 10 | Location 269-270 | Added on Wednesday, January 3, 2018 11:03:56 PM
+
+Market crashes are not randomly occurring lightning bolts; they are the consequence of the madness of crowds who are busy avoiding the last mania as they participate in what will turn out to be the current one.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 16 | Location 358-363 | Added on Wednesday, January 3, 2018 11:21:27 PM
+
+The universe does indeed seem to run like some splendid Swiss clockwork: We can predict the orbits of planets and the frequency of light emitted by atoms to eight or ten decimal places. But when a physicist first pages through a graduate economics or finance textbook, he or she begins to feel aghast. The mathematics of economics is so much more formal than the mathematics of physics textbooks—much of it reads like Euclid or set theory, replete with axioms, theorems, and lemmas. You would think that all this formality would produce precision. And yet, compared with physics, economics has so little explanatory or predictive power. Everything looks suspect; questions abound.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 16 | Location 363-371 | Added on Wednesday, January 3, 2018 11:23:45 PM
+
+When physicists pursue the laws of the universe, it seems selfless. But watching quants pursue sacred laws for the profane production of profit, I sometimes find myself thinking disturbingly of worshippers at a black mass. What does it signify to use the methods of physics and the language of mathematics to model the economic world? Is it justifiable to treat the economy and its markets as a complex machine? How can traders put their faith in this stuff? Isn’t value determined by people? And how can people be described by equations and predetermined rules? Isn’t this endeavor the misguided consequence of some sort of physics envy, an inappropriate attempt to model messy human systems with the wrong paradigm? Is social science, as the economic historian Robert Skidelsky once observed, merely a compendium of flawed thinking disguised as scientific understanding? If mathematics is the Queen of Sciences, is quantitative finance a science at all? And finally, are quants scientists or cranks?
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 26 | Location 540-542 | Added on Wednesday, January 3, 2018 11:45:15 PM
+
+I knew how few were the hours in the day one actually works seriously and undistractedly, and was momentarily tempted to start my own time sheet.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 51 | Location 1041-1044 | Added on Friday, January 12, 2018 12:43:32 AM
+
+When trying to discover something new in any field, one has to spend many years thinking, making false starts, wandering down blind alleys and stumbling into ditches, only to emerge again and keep going. For this, a PhD is a good, if painful, training.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 54 | Location 1101-1101 | Added on Friday, January 12, 2018 12:49:42 AM
+
+I had imagined postdoctoral life as a sort of priesthood, the blissful apotheosis of a life dedicated to knowledge.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 63 | Location 1269-1271 | Added on Sunday, January 14, 2018 11:28:02 PM
+
+I was beginning to become very aware of my limitations. There were people you met in physics who were simply off any scale you could imagine. When I read classic papers by Einstein or Feynman, I realized that though I could understand and utilize their framework, I could never have created it.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 63 | Location 1273-1275 | Added on Sunday, January 14, 2018 11:28:40 PM
+
+I have a friend who liked to point out the obviousness of various great discoveries in physics and finance. The obviousness is a delusion. Many things seem clear only once they have been taught to you in a historical context, with all the prejudices, confusion, and competing theories omitted.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 63 | Location 1275-1276 | Added on Sunday, January 14, 2018 11:28:50 PM
+
+Every iota of discovery, in finance or theoretical physics, comes at the cost of long immersion, hard labor, and struggle.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 64 | Location 1281-1284 | Added on Sunday, January 14, 2018 11:29:46 PM
+
+Ever since, through ups and downs, I have tried to remember that no matter how low you get, about work or life, you can take some solace from the fact that the future is unpredictable. Even in the midst of misery, unexpectedly good things can happen without warning.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 69 | Location 1378-1380 | Added on Sunday, January 14, 2018 11:40:38 PM
+
+Once, when he was having a hard time with a woman, he became much more communicative and commented to me, sadly but accurately, that he was one of those people who became much nicer when they had troubles.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 92 | Location 1810-1812 | Added on Tuesday, January 16, 2018 12:04:41 AM
+
+Everything is interesting when you examine it closely enough to be able to reconcile its quality and its quantity; every field is fascinating when you have sufficient familiarity with its nuances and begin to try to bridge the gap between its form and its implementation.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 110 | Location 2134-2135 | Added on Sunday, January 21, 2018 11:52:51 PM
+
+But building a riskless money machine, especially on a large scale, is not that easy. There are not that many riskless profits to be harvested in the world.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 123 | Location 2399-2400 | Added on Monday, January 22, 2018 12:20:27 AM
+
+All of Stan’s hires came from a culture in which you did your own dirty work—you developed your own theory, did your own mathematics, and then wrote your own programs.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 135 | Location 2603-2607 | Added on Tuesday, January 23, 2018 12:05:10 AM
+
+Ravi instructed me to learn options theory, rewrite the model in C, and construct a friendlier front end. It was a perfect assignment since it immediately exposed me to theory, implementation, and interaction with the business. I spent the next few days making a rapid first pass through the theory of stock options as described in the original Cox-Ross-Rubinstein binomial paper. Then, I studied the FORTRAN version of Ravi’s bond option model and set about rewriting it in C on FSG’s VAX computer.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Note on page 135 | Location 2606 | Added on Tuesday, January 23, 2018 12:05:21 AM
+
+Sounds beautifull
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 136 | Location 2633-2634 | Added on Tuesday, January 23, 2018 12:08:33 AM
+
+Despite the genuine glories of quantitative modeling, quant groups often have the most dramatic effect by improving the ergonomics of trading and
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 136 | Location 2633-2635 | Added on Tuesday, January 23, 2018 12:08:40 AM
+
+Despite the genuine glories of quantitative modeling, quant groups often have the most dramatic effect by improving the ergonomics of trading and sales.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 167 | Location 3174-3176 | Added on Thursday, January 25, 2018 12:22:07 AM
+
+A very direct man, he was uncomfortable with small talk. When he had nothing to say, he said nothing; this could be disconcerting on the telephone, where he often simply kept silent for a minute or two without terminating the conversation. Sometimes,
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 193 | Location 3664-3666 | Added on Wednesday, January 31, 2018 11:34:10 PM
+
+“Whenever I see something complex and confusing in the investment area,” he retorted, “I see the scope for getting a little extra benefit out of being smart.”
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 250 | Location 4675-4677 | Added on Monday, February 5, 2018 11:45:32 PM
+
+The more I look at the conflict between markets and theories, the more that limitations of models in the financial and human world become apparent to me.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 255 | Location 4774-4774 | Added on Tuesday, February 6, 2018 7:39:18 AM
+
+Like insurance companies, trading desks at investment banks make money by taking calculated risks for a fee.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 256 | Location 4782-4783 | Added on Tuesday, February 6, 2018 7:41:03 AM
+
+Invented in 1994 by the J. P. Morgan bank, VaR is an unsatisfactory risk metric that has somehow become an industry standard.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 256 | Location 4791-4793 | Added on Tuesday, February 6, 2018 7:42:39 AM
+
+The aim was to take the appropriate amount of risk for the economic environment, not to eliminate it. No risk, no return.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 257 | Location 4813-4814 | Added on Tuesday, February 6, 2018 7:44:52 AM
+
+So much of financial modeling is an exercise of the imagination.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 261 | Location 4876-4879 | Added on Tuesday, February 6, 2018 8:03:49 AM
+
+I believe that you can summarize the essence of quantitative finance on one leg, too: “If you want to know the value of a security, use the price of another security that’s as similar to it as possible. All the rest is modeling. Go and build.”
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 261 | Location 4879-4880 | Added on Tuesday, February 6, 2018 8:04:12 AM
+
+Financial economists grandiosely refer to this law as the law of one price, which states that securities with identical future payouts, no matter how the future turns out, should have identical current prices.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 264 | Location 4941-4950 | Added on Tuesday, February 6, 2018 8:20:33 AM
+
+The snows of yesteryear inevitably melt, and there’s nothing sad about it. I was ready for something new. Chapter 16 The Great Pretender Full circle, back to Columbia Physics and finance redux Different endeavors require different degrees of precision Financial models as gedanken experiments A year later, in the fall of 2003, I had come full circle, time present and time past present in time future.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 264 | Location 4941-4941 | Added on Tuesday, February 6, 2018 8:20:40 AM
+
+The snows of yesteryear inevitably melt, and there’s nothing sad about it. I was ready for something new.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 265 | Location 4955-4958 | Added on Tuesday, February 6, 2018 8:22:33 AM
+
+The tools they used—differential calculus, partial differential equations, Fourier series, Monte Carlo simulations, even Hilbert spaces—at first seemed as appropriate for describing the movements of stocks and yield curves as they did for particles and fields.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 266 | Location 4962-4963 | Added on Tuesday, February 6, 2018 8:23:17 AM
+
+Seventeen years on, I say without regret that things aren’t the way I expected. There is no unified theory. Models must necessarily be pragmatic, and traders typically use a variety of similar but slightly inconsistent models—
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 266 | Location 4965-4966 | Added on Tuesday, February 6, 2018 8:23:40 AM
+
+The best quants know that it is unattainable. Newcomers to the field find it hard to swallow.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 266 | Location 4970-4972 | Added on Tuesday, February 6, 2018 8:24:18 AM
+
+It isn’t really possible. And it’s not a question of computational power—even infinitely fast computers won’t do the trick. The problem is deeper.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 266 | Location 4972-4973 | Added on Tuesday, February 6, 2018 8:24:32 AM
+
+The techniques of physics hardly ever produce more than the most approximate truth in finance, because “true” financial value is itself a suspect notion.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 266 | Location 4977-4983 | Added on Tuesday, February 6, 2018 8:25:37 AM
+
+As a result, physicists turned quants don’t expect too much from their theories, though many economists naively do. Perhaps this is because physicists, raised on theories capable of superb divination, know the difference between a fundamental theory and a phenomenological toy, useful though the latter may be. Trained economists have never seen a really first-class model. It’s not that physics is “better,” but rather that finance is harder. In physics you’re playing against God, and He doesn’t change his laws very often. When you’ve checkmated Him, He’ll concede. In finance, you’re playing against God’s creatures, agents who value assets based on their ephemeral opinions. They don’t know when they’ve lost, so they keep trying.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 268 | Location 5015-5017 | Added on Tuesday, February 6, 2018 8:34:58 AM
+
+In the end, a theory is accepted not because it is confirmed by conventional empirical tests, but because researchers persuade one another that the theory is correct and relevant.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 269 | Location 5027-5031 | Added on Tuesday, February 6, 2018 8:36:34 AM
+
+Models are better regarded as a collection of parallel thought universes you can explore. Each universe should be consistent, but the actual financial and human world, unlike the world of matter, is going to be infinitely more complex than any model we make of it. We are always trying to shoehorn the real world into one of the models to see how useful an approximation it is.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 269 | Location 5040-5053 | Added on Tuesday, February 6, 2018 8:38:30 AM
+
+A little hubris is good. But then, when you’re done modeling, you must remind yourself that you’re theorizing about I’s, and that, though God’s world can be divined by principles, humanity prefers to remain mysterious. Catastrophes strike when people allow theories to take on a life of their own and hubris evolves into idolatry. Somewhere between these two extremes, a little north of common sense but still south of idolatry, lies the wise use of conceptual models. It takes judgment to draw the line. Meanwhile, fundamental physics and its visions of ten-dimensional strings seem to get steadily more arcane, and quantitative finance becomes progressively more refined and detailed. Being a scientist can sometimes be depressing. Surrounded by younger versions of yourself, you are constantly confronted by the mismatch between the dreams of youth and the facts of maturity. I once read J.P.S. Uberoi’s biography of Goethe,1 one of the last people to make contributions to both art and science. Goethe’s Theory of Colours is a unified examination of the interior and exterior characteristics of light and color, conducted with an awareness of the observer himself. According to Uberoi, scientists tend to regard Goethe as a poet who strayed beyond his proper place. His critics said he mistakenly thought of Nature as a work of art, being qualitative and personal where he should have been quantitative and impersonal. But Goethe was not so naive as to think that Nature is a work of art, wrote Uberoi. Rather,
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 269 | Location 5040-5042 | Added on Tuesday, February 6, 2018 8:38:42 AM
+
+A little hubris is good. But then, when you’re done modeling, you must remind yourself that you’re theorizing about I’s, and that, though God’s world can be divined by principles, humanity prefers to remain mysterious.
+==========
+My Life as a Quant: Reflections on Physics and Finance (Derman, Emanuel)
+- Your Highlight on page 270 | Location 5046-5048 | Added on Tuesday, February 6, 2018 8:39:15 AM
+
+Being a scientist can sometimes be depressing. Surrounded by younger versions of yourself, you are constantly confronted by the mismatch between the dreams of youth and the facts of maturity.
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 607 | Location 9306-9307 | Added on Tuesday, February 6, 2018 4:06:56 PM
+
+lukewarm water, and anoints him all over with sweet-smelling
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 608 | Location 9322-9324 | Added on Tuesday, February 6, 2018 4:10:50 PM
+
+for by my faith, señor, the poor man is incapacitated from showing the virtue of generosity to anyone, though he may possess it in the highest degree; and gratitude that consists of disposition only is a dead thing, just as faith without works is dead.
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 614 | Location 9400-9401 | Added on Tuesday, February 6, 2018 4:24:28 PM
+
+Her father watched over her and she watched over herself; for there are no locks, or guards, or bolts that can protect a young girl better than her own modesty.
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 646 | Location 9896-9896 | Added on Friday, February 9, 2018 12:28:23 PM
+
+him, and ascertain for himself the truth of the matter. Yielding
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 674 | Location 10327-10328 | Added on Tuesday, February 13, 2018 7:33:12 AM
+
+I will take it as a great favour; and if he does not give it to me, I was born like everyone else, and a man must not live in dependence on anyone except God;
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 683 | Location 10459-10461 | Added on Tuesday, February 13, 2018 7:47:54 AM
+
+being now a thing of the past, has no existence; while the only thing that has any existence is what we see before us; and if this person whom fortune has raised from his original
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 683 | Location 10459-10460 | Added on Tuesday, February 13, 2018 7:48:01 AM
+
+being now a thing of the past, has no existence; while the only thing that has any existence is what we see before
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 683 | Location 10459-10460 | Added on Tuesday, February 13, 2018 7:48:07 AM
+
+being now a thing of the past, has no existence; while the only thing that has any existence is what we see before us;
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 690 | Location 10566-10567 | Added on Tuesday, February 13, 2018 8:00:16 AM
+
+know that the path of virtue is very narrow, and the road of vice broad and spacious; I know their ends and goals are
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 690 | Location 10566-10568 | Added on Tuesday, February 13, 2018 8:00:24 AM
+
+I know that the path of virtue is very narrow, and the road of vice broad and spacious; I know their ends and goals are different, for the broad and easy road of vice ends in death, and the narrow and toilsome one of virtue in life, and not transitory life, but in that which has no end;
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 704 | Location 10792-10795 | Added on Friday, February 16, 2018 8:15:01 AM
+
+though we Catholic Christians and knights-errant look more to that future glory that is everlasting in the ethereal regions of heaven than to the vanity of the fame that is to be acquired in this present transitory life; a fame that, however long it may last, must after all end with the world itself, which has its own appointed end.
+==========
+Don Quixote (Miguel de Cervantes Saavedra)
+- Your Highlight on page 722 | Location 11057-11058 | Added on Tuesday, February 20, 2018 7:59:52 AM
+
+The fact is I was born to be an example of misfortune, and the target and mark at which the arrows of adversity are aimed and directed.
+==========
