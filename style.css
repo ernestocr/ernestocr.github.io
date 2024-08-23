@@ -28,3 +28,24 @@ pre {
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+.wrapper {
+  width: auto;
+  max-width: 760px;
+}
+
+section {
+  margin: 1em auto;
+}
+
+hr {
+  border: 1px solid #eee;
+}
+
+p {
+  margin: 0.5em auto;
+}
+
+section p:first-of-type {
+  font-weight: bold;
+}
