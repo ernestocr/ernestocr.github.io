@@ -1,0 +1,14 @@
+body {
+    /*font-family: Palatino, Palatino Linotype;*/
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    /*font-weight: lighter;*/
+    font-size: 12pt;
+}
+
+p {
+    margin: 1em 0;
+}
+
+nav {
+    margin-top: 0.05em;
+}

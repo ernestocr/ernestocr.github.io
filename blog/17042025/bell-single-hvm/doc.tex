@@ -1,0 +1,269 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{tgtermes}
+%\usepackage[italic]{mathastext}
+
+%\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{
+%\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+%\theoremstyle{definition}
+%\newtheorem{defn}{Definition}
+%\newtheorem*{sol}{Solution}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{cor}{Corollary}
+%\newtheorem{exa}{Example}
+%\newtheorem{exeinner}{Exercise}
+%\newenvironment{exe}[1]{%
+%    \IfBlankTF{#1}
+%    {\renewcommand{theexeinner}{\unskip}}
+%    {\renewcommand\theexeinner{#1}}%
+%    \exeinner
+%}{\endexeinner}
+
+\title{John Bell's HVM for a single spin-1/2 particle}
+\author{Ernesto Camacho}
+\begin{document}
+    \maketitle
+
+    In John Bell's original 1964 paper \textit{On the
+    Einstein Podolsky Rosen Paradox} he gives an
+    illustration of a hidden variable model that reproduces
+    all of the spin measurement statistics of quantum theory
+    for a single particle of spin-1/2. It was a common held
+    belief at the time that such models cannot exist, and so
+    his illustration served as motivation for his subsequent
+    analysis. He quickly presents how the model is defined
+    and skips a lot of the calculations, and so for my
+    understanding, I've filled those in. 
+
+    He starts out with a spin-1/2 particle in a pure state
+    with polarization given by some vector $\vec p$. The
+    hidden variable that he has chosen for this model is
+    given by a unit vector $\vec \lambda$ that is
+    distributed uniformly over the hemisphere $\vec \lambda
+    \cdot \vec p > 0$:
+
+    \begin{figure}[ht]
+        \centering
+        \tdplotsetmaincoords{60}{110}
+
+        %define polar coordinates for some vector
+        \pgfmathsetmacro{\radius}{1}
+        \pgfmathsetmacro{\thetavec}{0}
+        \pgfmathsetmacro{\phivec}{0}
+
+
+        %start tikz picture, and use the tdplot_main_coords style to implement the display 
+        %coordinate transformation provided by 3dplot
+        \begin{tikzpicture}[scale=3,tdplot_main_coords]
+            %draw the main coordinate system axes
+            %\draw[thick,->] (0,0,0) -- (-1,0,0) node[anchor=south]{$z$};
+            %\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$x$};
+            %\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$y$};
+            \tdplotsetcoord{P}{1}{0}{90}
+            \tdplotsetcoord{L}{1}{45}{90}
+
+            \draw[thick,->] (0,0,0) -- (P) node[anchor=south west]{$\vec p$};
+            \draw[thick,->,blue] (0,0,0) -- (L)
+                node[anchor=south west]{$\vec \lambda$};
+
+            \tdplotsetthetaplanecoords{\phivec}
+
+            %draw some dashed arcs, demonstrating direct arc drawing
+            %\draw[dashed,tdplot_rotated_coords] (\radius,0,0) arc (0:90:\radius);
+
+            \draw[dashed] (\radius,0,0) arc (0:360:\radius);
+            \shade[ball color=blue!10!white,opacity=0.2] (1cm,0) arc (0:-180:1cm and 5mm) arc (180:0:1cm and 1cm);
+            % (-z x y)
+            %\draw (0, 1, 0) node [circle, fill=blue, inner sep=.02cm] () {};
+            %\draw (0, 0, 1) node [circle, fill=green, inner sep=.02cm] () {};
+            %\draw (-1, 0, 0) node [circle, fill=red, inner sep=.02cm] () {};
+        \end{tikzpicture}
+        \caption{The hemisphere defined by $\vec \lambda
+        \cdot \vec p > 0$.}
+        \label{fig:hemi}
+    \end{figure}
+
+    Let $S^2$ be the unit sphere which we will use as the
+    set of spin measurement directions. Let $\Lambda$ be the
+    set of unit vectors satisfying the hemisphere condition.
+    The model is a function $A : \Lambda \times S^2 \to
+    \{-1,1\}$ defined as
+    \begin{equation}
+        A(\vec \lambda, \vec a)
+        = \text{sign } \vec \lambda \cdot \vec a',
+    \end{equation}
+    where $\vec a'$ is a unit vector that depends on the
+    polarization $\vec p$ and the measurement direction
+    $\vec a$. This angle is chosen in such a way that the
+    statistics of the measurements are reproduced. This is
+    done by calculating the expectation value of $A$ over
+    the hidden variable given by the uniform density
+    $\rho(\lambda)$. John does not state any details here
+    but we can assume that he is using the Lebesgue measure
+    $d\Omega(\vec \lambda) = \sin\theta \, d\theta d\phi$ on
+    $S^2$ properly normalized over the hemisphere of
+    interest. Since $\int_{\Lambda} \, d\Omega(\lambda) =
+    2\pi$, the distribution is 
+    \begin{equation}
+        \rho(\vec \lambda)
+        =
+        \begin{cases}
+            \frac{1}{2\pi} & \text{if } \vec \lambda \cdot
+            \vec p > 0 \\
+            0 & \text{elsewhere.}
+        \end{cases}
+    \end{equation}
+    John then states that the expected value of $A$ given
+    the distribution $\rho$ is equal to $1 - 2\theta' / \pi$ 
+    where $\theta'$ is the angle between the soon to be
+    determined vector $\vec a'$ and $\vec p$. We now look
+    at the details of this calculation. By definition, the
+    expectation value is
+    \begin{align}
+        \int_{\Lambda}
+        A(\vec \lambda, \vec a) \rho(\vec \lambda) \,
+        d\Omega(\vec \lambda)
+        &= \int_{\Lambda}
+        (\text{sign } \vec \lambda \cdot \vec a') \rho(\vec
+        \lambda) \, d\Omega(\vec \lambda) \\
+        &= \int_{\Lambda \cap (\vec \lambda \cdot \vec a' >
+        0)} \rho(\vec \lambda) \, d\Omega(\vec \lambda)
+        - \int_{\Lambda \cap (\vec \lambda \cdot \vec a' <
+        0)} \rho(\vec \lambda) \, d\Omega(\vec \lambda).
+    \end{align}
+    To evaluate the integrals we must compute the area of
+    the intersection of two hemispheres. Let $\gamma$ be the
+    angle between two vectors $\vec a$ and $\vec b$, which
+    define the hemispheres $H_1$ and $H_2$ respectively.  We
+    orient the coordinate system so that both vectors lie on
+    the $xy$-plane with $\vec a$ parallel to the $x$-axis
+    and $\gamma \in [0,2\pi]$.  Symmetry dictates that the
+    area will be the same for $\gamma$ and $\gamma + \pi$,
+    so we only consider $\gamma \in [0,\pi]$. Under this
+    choice, $\vec a$ has coordinates $\theta =
+    \frac{\pi}{2}$ and $\phi = 0$ and $\vec b$ has
+    coordinates $\theta = \frac{\pi}{2}$ and $\phi =
+    \gamma$. Then the area of the intersection of $H_1$ and
+    $H_2$ is
+    \begin{equation}
+        \int_{H_1 \cap H_2} \, d\Omega(\vec \lambda)
+        = 2\pi - \int_{0}^{\gamma}\int_{0}^{\pi}
+        \sin\theta \, d\theta d\phi
+        = 2\pi - 2 \int_{0}^{\gamma} \, d\phi
+        = 2\pi - 2\gamma.
+    \end{equation}
+    Going back to the calculation of the expectation value,
+    we recall that $\Lambda$ is the hemisphere defined by
+    $\vec p$, while $\vec a'$ defines the other hemisphere,
+    therefore
+    \begin{equation}
+        \int_{\Lambda \cap (\vec \lambda \cdot \vec a' > 0)}
+        \rho(\vec \lambda) \, d\Omega(\vec \lambda)
+        = \frac{1}{2\pi} \int_{\Lambda \cap (\vec \lambda
+        \cdot \vec a' > 0)} \,
+        d\Omega(\vec \lambda)
+        = \frac{1}{2\pi} \left( 2\pi - 2\theta' \right) 
+        = 1 - \frac{\theta'}{\pi},
+    \end{equation}
+    where $\theta'$ is the angle between $\vec p$ and $\vec
+    a'$. Similarly, the condition $\vec \lambda \cdot \vec a
+    < 0$ defines a hemisphere opposite to the one defined by
+    $\vec \lambda \cdot \vec a > 0$. Thus, since $\rho$ is
+    normalized we obtain
+    \begin{equation}
+        \int_{\Lambda \cap (\vec \lambda \cdot \vec a' < 0)}
+        \rho(\vec \lambda) \, d\Omega(\vec \lambda)
+        = 1 - \left(1 - \frac{\theta'}{\pi}\right)
+        = \frac{\theta'}{\pi}.
+    \end{equation}
+    Therefore the expectation value is
+    \begin{equation}
+        \int_{\Lambda} A(\vec \lambda, \vec a) \rho(\vec
+        \lambda) \, d\Omega(\vec \lambda)
+        = \left(1 - \frac{\theta'}{\pi}\right) -
+        \frac{\theta'}{\pi} 
+        = 1 - \frac{2\theta'}{\pi},
+    \end{equation}
+    which is what John stated in Eqn. (5) of his paper. The
+    question now is, how do we define $\vec a'$ so that this
+    model reproduces the spin statistics. This is of course
+    trivial since the expectation value of a spin
+    measurement in direction $\vec a$ for a polarization
+    $\vec p$ is 
+    \begin{equation}
+        \langle \vec a \cdot \vec \sigma \rangle
+        = \vec a \cdot \vec p
+        = \cos\theta,
+    \end{equation}
+    where $\theta$ is the angle between $\vec a$ and $\vec
+    p$. So \textit{given} the measurement direction and the
+    state, the angle $\theta'$ between  $\vec p$ and $\vec
+    a'$ must satisfy
+    \begin{equation}
+        1 - \frac{2\theta'}{\pi}
+        = \cos\theta,
+    \end{equation}
+    which leads us to,
+    \begin{equation}
+        \theta'
+        = \frac{\pi}{2}\left(1 - \cos\theta\right).
+    \end{equation}
+    So by construction, the expectation value of the model
+    $A$, for a given measurement direction $\vec a$, with
+    respect to the uniform distribution $\rho$ over the
+    hidden variables $\Lambda$, determined by the
+    polarization $\vec p$ (a bit of a mouthful), matches
+    the expectation value given by quantum theory. In other
+    words, the model reproduces all of the spin statistics
+    in a deterministic manner, i.e., \textit{if} we knew the
+    value of $\vec \lambda$ for some measurement instance,
+    then we could predict with certainty the outcome $A(\vec
+    \lambda, \vec a)$.  The statistical features of quantum
+    theory then only arise because we don't know the value
+    of this variable for individual instances. John then
+    goes on to show that when considering a bi-partite
+    system, under certain assumptions (which are reasonable
+    but can be questioned), any hidden variable model is
+    constraind by some inequality determined by the
+    correlations of the value assignments, yet the
+    statistical outcomes determined by quantum theory
+    violate this inequality. Such violations have been
+    verified experimentally, yet one must be careful not to
+    draw over-reaching conclusions about non-locality and
+    realism, as a lot comes down to the accepted
+    assumptions. I will post more on this later.
+
+        
+
+
+\end{document}

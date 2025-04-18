@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>John Bell’s HVM for a single spin-1/2 particle</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='doc.css' rel='stylesheet' type='text/css' /> 
+<link rel="stylesheet" href="../../../style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../../latex-style.css" media="screen" title="no title" charset="utf-8">
+<meta content='doc.tex' name='src' /> 
+</head><body>
+
+<div class="blob"></div>
+       <div class="wrapper">
+           <div class="container">
+               <h2>In Dirac's Sea</h2>
+               <nav><a href="../../../index.html">Home</a> / <a href="../../index.html">Blog</a></nav>
+               <section class="post">
+
+
+   <div class='maketitle'>
+                                                                         
+
+                                                                         
+                                                                                
+
+<h2 class='titleHead'>John Bell’s HVM for a single spin-1/2 particle</h2>
+ <div class='author'><span class='ecrm-1200'>Ernesto Camacho</span></div><br />
+<div class='date'><span class='ecrm-1200'>April 17, 2025</span></div>
+   </div>
+<!-- l. 57 --><p class='indent'>   In John Bell’s original 1964 paper <span class='ecti-1000'>On the Einstein Podolsky Rosen Paradox </span>he gives an
+illustration of a hidden variable model that reproduces all of the spin measurement
+statistics of quantum theory for a single particle of spin-1/2. It was a common held
+belief at the time that such models cannot exist, and so his illustration served as
+motivation for his subsequent analysis. He quickly presents how the model is defined
+and skips a lot of the calculations, and so for my understanding, I’ve filled those
+in.
+</p><!-- l. 68 --><p class='indent'>   He starts out with a spin-1/2 particle in a pure state with polarization given by some
+vector <img alt='⃗p  ' class='math' src='doc0x.svg' />. The hidden variable that he has chosen for this model is given by a unit vector <img alt='⃗λ  ' class='math' src='doc1x.svg' />
+that is distributed uniformly over the hemisphere <img alt='⃗λ ⋅⃗p &gt; 0  ' class='math' src='doc2x.svg' />:
+</p>
+   <figure class='figure' id='x1-21'><span id='the-hemisphere-defined-by-p-'></span> 
+
+                                                                         
+
+                                                                         
+
+                                                                         
+
+                                                                         
+<!-- l. 87 --><p class='noindent'><img alt='⃗p⃗λ
+' src='doc3x.svg' />
+</p>
+<figcaption class='caption'><span class='id'>Figure 1: </span><span class='content'>The hemisphere defined by <img alt='⃗λ⋅⃗p &gt; 0  ' class='math' src='doc4x.svg' />.</span></figcaption><!-- tex4ht:label?: x1-21  -->
+                                                                         
+
+                                                                         
+   </figure>
+<!-- l. 116 --><p class='indent'>   Let <img alt='S2  ' class='math' src='doc5x.svg' /> be the unit sphere which we will use as the set of spin measurement directions.
+Let <img alt='Λ  ' class='math' src='doc6x.svg' /> be the set of unit vectors satisfying the hemisphere condition. The model is a function
+<img alt='A : Λ × S2 → {− 1,1} ' class='math' src='doc7x.svg' /> defined as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='A(⃗λ,⃗a) = sign ⃗λ⋅⃗a′,
+' class='math-display' src='doc8x.svg' /><a id='x1-3r1'></a></div>
+   </td><td class='equation-label'>(1)</td></tr></table>
+<!-- l. 124 --><p class='nopar'>where <img alt='⃗a′ ' class='math' src='doc9x.svg' /> is a unit vector that depends on the polarization <img alt='⃗p  ' class='math' src='doc10x.svg' /> and the measurement direction
+<img alt='⃗a ' class='math' src='doc11x.svg' />. This angle is chosen in such a way that the statistics of the measurements are reproduced.
+This is done by calculating the expectation value of <img alt='A  ' class='math' src='doc12x.svg' /> over the hidden variable given
+by the uniform density <img alt='ρ(λ)  ' class='math' src='doc13x.svg' />. John does not state any details here but we can
+assume that he is using the Lebesgue measure <img alt='dΩ (⃗λ) = sin 𝜃d𝜃dϕ  ' class='math' src='doc14x.svg' /> on <img alt='S2  ' class='math' src='doc15x.svg' /> properly
+normalized over the hemisphere of interest. Since <img alt='∫
+ Λ dΩ(λ) = 2π  ' class='math' src='doc16x.svg' />, the distribution
+is
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='      {
+ ⃗      12π- if ⃗λ ⋅⃗p &gt; 0
+ρ(λ ) = 0   elsewhere.
+' class='math-display' src='doc17x.svg' /><a id='x1-4r2'></a></div>
+   </td><td class='equation-label'>(2)</td></tr></table>
+<!-- l. 145 --><p class='nopar'>John then states that the expected value of <img alt='A  ' class='math' src='doc18x.svg' /> given the distribution <img alt='ρ  ' class='math' src='doc19x.svg' /> is equal to
+<img alt='     ′
+1 − 2𝜃 ∕π  ' class='math' src='doc20x.svg' /> where <img alt=' ′
+𝜃 ' class='math' src='doc21x.svg' /> is the angle between the soon to be determined vector <img alt='  ′
+⃗a ' class='math' src='doc22x.svg' /> and <img alt='⃗p  ' class='math' src='doc23x.svg' />.
+We now look at the details of this calculation. By definition, the expectation value
+is
+</p>
+   <div class='align'><img alt='pict' src='doc24x.svg' /><a id='x1-5r3'></a><a id='x1-6r4'></a></div>
+                                                                         
+
+                                                                         
+<!-- l. 164 --><p class='indent'>   To evaluate the integrals we must compute the area of the intersection of two hemispheres.
+Let <img alt='γ  ' class='math' src='doc25x.svg' /> be the angle between two vectors <img alt='⃗a  ' class='math' src='doc26x.svg' /> and <img alt='⃗b  ' class='math' src='doc27x.svg' />, which define the hemispheres
+<img alt='H1  ' class='math' src='doc28x.svg' /> and <img alt='H2  ' class='math' src='doc29x.svg' /> respectively. We orient the coordinate system so that both vectors
+lie on the <img alt='xy  ' class='math' src='doc30x.svg' />-plane with <img alt='⃗a  ' class='math' src='doc31x.svg' /> parallel to the <img alt='x  ' class='math' src='doc32x.svg' />-axis and <img alt='γ ∈ [0,2π]  ' class='math' src='doc33x.svg' />. Symmetry
+dictates that the area will be the same for <img alt='γ  ' class='math' src='doc34x.svg' /> and <img alt='γ + π  ' class='math' src='doc35x.svg' />, so we need only consider
+<img alt='γ ∈ [0,π]  ' class='math' src='doc36x.svg' />. Under this choice, <img alt='⃗a  ' class='math' src='doc37x.svg' /> has coordinates <img alt='𝜃 = π2  ' class='math' src='doc38x.svg' /> and <img alt='ϕ = 0  ' class='math' src='doc39x.svg' /> and <img alt='⃗b  ' class='math' src='doc40x.svg' /> has
+coordinates <img alt='𝜃 = π2  ' class='math' src='doc41x.svg' /> and <img alt='ϕ = γ  ' class='math' src='doc42x.svg' />. Then the area of the intersection of <img alt='H1  ' class='math' src='doc43x.svg' /> and <img alt='H2  ' class='math' src='doc44x.svg' />
+is
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='∫                 ∫ γ ∫ π                ∫ γ
+       dΩ(⃗λ) = 2π −      sin 𝜃d𝜃dϕ = 2π − 2   dϕ = 2π − 2γ.
+ H1∩H2              0  0                  0
+' class='math-display' src='doc45x.svg' /><a id='x1-7r5'></a></div>
+   </td><td class='equation-label'>(5)</td></tr></table>
+<!-- l. 184 --><p class='nopar'>Going back to the calculation of the expectation value, we recall that <img alt='Λ  ' class='math' src='doc46x.svg' /> is the hemisphere
+defined by <img alt='⃗p  ' class='math' src='doc47x.svg' />, while <img alt='⃗a′ ' class='math' src='doc48x.svg' /> defines the other hemisphere, therefore
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='∫                       ∫                                  ′
+         ρ(⃗λ)dΩ(⃗λ) = 1--         dΩ (⃗λ) = -1-(2π − 2𝜃′) = 1 − 𝜃-,
+ Λ∩(⃗λ⋅⃗a′&gt;0)            2π  Λ∩(⃗λ⋅⃗a′&gt;0)        2π               π
+' class='math-display' src='doc49x.svg' /><a id='x1-8r6'></a></div>
+   </td><td class='equation-label'>(6)</td></tr></table>
+<!-- l. 197 --><p class='nopar'>where <img alt='𝜃′ ' class='math' src='doc50x.svg' /> is the angle between <img alt='⃗p  ' class='math' src='doc51x.svg' /> and <img alt='⃗a′ ' class='math' src='doc52x.svg' />. Similarly, the condition <img alt='⃗λ ⋅⃗a &lt; 0  ' class='math' src='doc53x.svg' /> defines a
+hemisphere opposite to the one defined by <img alt='⃗λ ⋅⃗a &gt; 0  ' class='math' src='doc54x.svg' />. Thus, since <img alt='ρ  ' class='math' src='doc55x.svg' /> is normalized we
+obtain
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+                                                                         
+
+                                                                         
+<img alt='∫                        (    ′)    ′
+          ρ(⃗λ)dΩ(⃗λ) = 1 − 1− 𝜃-  = 𝜃-.
+  Λ∩(⃗λ⋅⃗a′&lt;0)                    π     π
+' class='math-display' src='doc56x.svg' /><a id='x1-9r7'></a></div>
+   </td><td class='equation-label'>(7)</td></tr></table>
+<!-- l. 208 --><p class='nopar'>Therefore the expectation value is
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='∫                   (      )
+     ⃗    ⃗     ⃗        𝜃′    𝜃′      2𝜃′-
+ Λ A(λ,⃗a)ρ(λ )dΩ(λ) =  1− π   − π = 1−  π ,
+' class='math-display' src='doc57x.svg' /><a id='x1-10r8'></a></div>
+   </td><td class='equation-label'>(8)</td></tr></table>
+<!-- l. 216 --><p class='nopar'>which is what John stated in Eqn. (5) of his paper. The question now is, how do we define
+<img alt=' ′
+⃗a ' class='math' src='doc58x.svg' /> so that this model reproduces the spin statistics? This is of course trivial since
+the expectation value of a spin measurement in direction <img alt='⃗a  ' class='math' src='doc59x.svg' /> for a polarization <img alt='⃗p  ' class='math' src='doc60x.svg' />
+is
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='⟨⃗a⋅⃗σ⟩ = ⃗a⋅⃗p = cos𝜃,
+' class='math-display' src='doc61x.svg' /><a id='x1-11r9'></a></div>
+   </td><td class='equation-label'>(9)</td></tr></table>
+<!-- l. 227 --><p class='nopar'>where <img alt='𝜃  ' class='math' src='doc62x.svg' /> is the angle between <img alt='⃗a  ' class='math' src='doc63x.svg' /> and <img alt='⃗p  ' class='math' src='doc64x.svg' />. So <span class='ecti-1000'>given </span>the measurement direction and the state,
+the angle <img alt='′
+𝜃 ' class='math' src='doc65x.svg' /> between <img alt='⃗p  ' class='math' src='doc66x.svg' /> and <img alt=' ′
+⃗a ' class='math' src='doc67x.svg' /> must satisfy
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='     ′
+1− 2𝜃-= cos𝜃,
+    π
+' class='math-display' src='doc68x.svg' /><a id='x1-12r10'></a></div>
+   </td><td class='equation-label'>(10)</td></tr></table>
+<!-- l. 235 --><p class='nopar'>which leads us to,
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='𝜃′ = π(1− cos𝜃).
+     2
+' class='math-display' src='doc69x.svg' /><a id='x1-13r11'></a></div>
+   </td><td class='equation-label'>(11)</td></tr></table>
+<!-- l. 240 --><p class='nopar'>So by construction, the expectation value of the model <img alt='A  ' class='math' src='doc70x.svg' />, for a given measurement direction
+<img alt='⃗a ' class='math' src='doc71x.svg' />, with respect to the uniform distribution <img alt='ρ  ' class='math' src='doc72x.svg' /> over the hidden variables <img alt='Λ  ' class='math' src='doc73x.svg' />, determined by
+the polarization <img alt='⃗p  ' class='math' src='doc74x.svg' /> (a bit of a mouthful), matches the expectation value given by
+quantum theory. In other words, the model reproduces all of the spin statistics in
+a deterministic manner, i.e., <span class='ecti-1000'>if  </span>we knew the value of <img alt='⃗λ  ' class='math' src='doc75x.svg' /> for some measurement
+instance, then we could predict with certainty the outcome <img alt='A (⃗λ,⃗a)  ' class='math' src='doc76x.svg' />. The statistical
+features of quantum theory then only arise because we don’t know the value of this
+variable for individual instances. John then goes on to show that when considering
+a bi-partite system, under certain assumptions (which are reasonable but can be
+questioned), any hidden variable model is constraind by some inequality determined by the
+correlations of the value assignments, yet the statistical outcomes determined by quantum
+theory violate this inequality. Such violations have been verified experimentally, yet
+one must be careful not to draw over-reaching conclusions about non-locality and
+realism, as a lot comes down to the accepted assumptions. I will post more on this
+later.
+</p>
+
+</section>
+<div style="margin-top: 7em;">&nbsp;</div> 
+</div>
+</div>
+
+</body> 
+</html>

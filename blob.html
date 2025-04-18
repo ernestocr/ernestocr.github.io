@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Blob</title>
+    <style type="text/css" media="screen">
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 200px;
+    right: 200px;
+    border-radius: 50%;
+    filter: blur(50px);
+    background: radial-gradient(circle, 
+        rgba(0, 180, 255, 0.9) 20%, 
+        rgba(0, 140, 255, 0.8) 40%, 
+        rgba(255, 140, 0, 0.7) 70%, 
+        rgba(0, 0, 0, 1) 100%);
+}
+
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+</body>
+</html>

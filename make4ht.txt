@@ -1,0 +1,1 @@
+make4ht index.tex "tikz+,pic-m,pic-equation,pic-align,svg"

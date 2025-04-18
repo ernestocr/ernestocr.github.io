@@ -4,20 +4,23 @@
 }
 
 body {
-  font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
-  margin: 20px;
+  font-family: Verdana,Helvetica,Arial,sans-serif;
+  background-color: #eee;
+  margin: 0;
+  max-width: auto;
+  padding: 0;
 }
 
 ul {
   margin-left: 20px;
 }
 
-ul a {
+a {
   color: #177ee6;
   text-decoration: none;
 }
 
-ul a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -35,8 +38,17 @@ pre {
 }
 
 .wrapper {
+    height: 100vh;
+}
+
+.container {
   width: auto;
-  max-width: 760px;
+  max-width: 720px;
+  /*background-color: rgba(255, 255, 255, 0.87)*/;
+  background-color: rgba(255, 255, 255, 1);
+  /*backdrop-filter: blur(50px);*/
+  margin: 2em;
+  padding: 2em;
 }
 
 section {
@@ -44,7 +56,7 @@ section {
 }
 
 hr {
-  border: 1px solid #eee;
+  border: none;
 }
 
 p {
@@ -53,4 +65,45 @@ p {
 
 section p:first-of-type {
   font-weight: bold;
+}
+
+section.post {
+    margin-top: 4em;
+}
+
+section.post p:first-of-type {
+    font-weight: normal;
+}
+
+.maketitle .titleHead {
+    text-align: left;
+}
+
+.maketitle .author {
+    display: none;
+}
+
+.maketitle .date {
+    text-align: left;
+    margin-top: -1em;
+}
+
+.blob {
+    position: fixed;
+    width: 750px;
+    height: 750px;
+    top: 10%;
+    left: 20%;
+    border-radius: 50%;
+    filter: blur(10px);
+    background: radial-gradient(circle, 
+        rgba(0, 180, 255, 0.9) 20%, 
+        rgba(0, 140, 255, 0.8) 40%, 
+        rgba(255, 140, 0, 0.7) 70%, 
+        rgba(0, 0, 0, 1) 100%);
+    z-index: -1;
+}
+
+.blog-list {
+    margin-top: 2em;
 }
