@@ -3,6 +3,7 @@ body {
     font-family: Verdana,Helvetica,Arial,sans-serif;
     /*font-weight: lighter;*/
     font-size: 12pt;
+    color: #000 !important;
 }
 
 p {
