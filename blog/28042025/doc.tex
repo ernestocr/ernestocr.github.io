@@ -1,0 +1,410 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{tgtermes}
+%\usepackage[italic]{mathastext}
+
+%\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{
+%\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem*{sol}{Solution}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{exa}{Example}
+\newtheorem{prop}{prop}
+%\newtheorem{exeinner}{Exercise}
+%\newenvironment{exe}[1]{%
+%    \IfBlankTF{#1}
+%    {\renewcommand{theexeinner}{\unskip}}
+%    {\renewcommand\theexeinner{#1}}%
+%    \exeinner
+%}{\endexeinner}
+
+\title{The Berry Phase}
+\author{Ernesto Camacho}
+\begin{document}
+    \maketitle
+
+    Applications/manifestations:
+    \begin{itemize}
+        \item The passage of photons in optical fibres
+        \item The spectra of molecules
+        \item The quantum Hall effect
+        \item Anomalies in quantum field theory
+    \end{itemize}
+
+    In 1983 Barry Simon observed that Berry's phase can be
+    seen as a geometric object, namely, as the holonomy in a
+    certain fibre bundle, known as the \textit{spectral
+    bundle}. Of course, the theory of fibre bundles was
+    successfully applied in the mathematical formulation of
+    guage theories.
+
+    Quantum phsics also shows its intricate beauty when one
+    applies an appropriate geometric framework.
+
+    \begin{defn}
+        A topological space $M$ is called an $n$-dimensional
+        \textit{topological manifold} if it looks locally
+        like a Euclidean space $\R^{n}$, or, more precisely
+        if there exists a family of open subsets $\{U_i\}_{i
+        \in I}$ of $M$ such that
+        \begin{itemize}
+            \item It covers $M$, i.e., $\cup_{i \in I} U_i =
+                M$. 
+            \item For each $i \in I$ there is a
+                homeomorphism (continuous, invertible map)
+                \begin{equation}
+                    \phi_i
+                    : U_i \to \phi(U_i) \subset \R^{n},
+                \end{equation}
+                where the pair $(U_i,\phi_i)$ is called a
+                chart. Moreover, any such two charts have to
+                be compatible, i.e., the map
+                \begin{equation}
+                    \phi_{ji}
+                    := \phi_j \circ \phi_i^{-1}
+                    : \phi_i(U_i \cap U_j)
+                    \to \phi_j(U_i \cap U_j),
+                \end{equation}
+                must be a homeomorphism.
+        \end{itemize}
+        A collection of compatible charts covering $M$ is
+        called an atlas. If the maps $\phi_{ji}$ are $C^{N}$ 
+        diffeomorphisms, then $M$ is called a
+        $C^{N}$-manifold.
+    \end{defn}
+
+    An atlas on a manifold $M$ gives us differential
+    calculus. A function $f : M \to \R^{n}$ is
+    differentiable if
+    \begin{equation}
+        f \circ \phi_i^{-1} : \phi_i(U_i) \to \R^{n}
+    \end{equation}
+    is differentiable for each chart $(U_i,\phi_i)$. The
+    space of smooth functions on $M$ is denoted by
+    $C^{\infty}(M)$. 
+
+    \begin{defn}
+        At each point $x \in U \subset M$ we can define the
+        differential operator $V_x$ by
+        \begin{equation}
+            V_x(f)
+            := \sum_{i=1}^{n} V_x^{i} \frac{\partial
+            f}{\partial x^{i}}(x),
+        \end{equation}
+        for any $f \in C^{\infty}(M)$. These differential
+        operators span an $n$-dimensional linear space
+        called the tangent space $T_xM$ at the point $x$.
+        The set
+        \begin{equation}
+            \left\{
+                \frac{\partial}{\partial x^{1}}\big|_x,
+                \ldots,
+                \frac{\partial}{\partial x^{n}}\big|_x
+            \right\}
+        \end{equation}
+        form a basis for $T_xM$, called the coordinate
+        basis.
+    \end{defn}
+
+    \begin{defn}
+        This will be better formalized later on, but for
+        now, an assignment
+        \begin{equation}
+            M \ni x \to V_x \in T_xM,
+        \end{equation}
+        is called a vector field. The space of vector fields
+        on $M$ is a $C^{\infty}(M)$-module denoted by
+        $\mathfrak{X}(M)$.
+    \end{defn}
+
+    \begin{defn}
+        Denote by $T_x^{*}M$ the algebraic dual of $T_xM$,
+        called a \textit{cotangent space} at $x$. The
+        coordinate basis in $T_xM$ induces the dual basis in
+        $T_x^{*}M$:
+        \begin{equation}
+            \left\{
+                dx^{1},\ldots,dx^{n}
+            \right\},
+        \end{equation}
+        such that
+        \begin{equation}
+            dx^{i} \left( \frac{\partial}{\partial x^{j}}
+            \right) = \delta^{i}{}_{j}.
+        \end{equation}
+    \end{defn}
+    
+    We can generalize the concept of a vector field to that
+    of covector fields, and even more generally, to the
+    concept of a \textit{tensor field} on $M$.
+
+    \begin{defn}
+        The smooth map
+        \begin{equation}
+            M \ni x \to T(x) \in T_x^{(k,l)}M
+            =: \underbrace{T_xM \otimes \cdots \otimes
+            T_xM}_{\text{$k$ times}} \otimes 
+            \underbrace{T_x^{*}M \otimes \cdots \otimes
+            T_x^{*}M}_{\text{$l$ times}},
+        \end{equation}
+        is called a tensor field of type $(k,l)$. Using a
+        coordinate basis we have
+        \begin{equation}
+            T
+            = T^{i_1\ldots i_k}{}_{j_1\ldots j_k} 
+            \frac{\partial}{\partial x^{i_1}} \otimes \cdots
+            \otimes \frac{\partial}{\partial x^{i_k}}
+            \otimes dx^{j_1} \otimes \cdots \otimes
+            dx^{j_l}.
+        \end{equation}
+    \end{defn}
+
+    \begin{defn}
+        Let $\phi : M \to N$ be a smooth map between to two
+        manifolds $M$ and $N$. The derivative $T_x\phi$ of
+        $\phi$ at a point $x \in M$ is a linear map
+        \begin{equation}
+            T_x \phi
+            : T_xM \to T_{\phi(x)}N,
+        \end{equation}
+        such that
+        \begin{equation}
+            [T_x\phi(v_x)](f)
+            := v_x(\phi \circ f),
+        \end{equation}
+        for any $f \in C^{\infty}(N)$ and $v_x \in T_xM$.
+    \end{defn}
+
+    Using the map $\phi : M \to N$ one may transport tensor
+    fields between $M$ and $N$. 
+
+    \begin{defn}
+        Let $\omega$ be a tensor field of type $(0,k)$ on
+        $N$. A \textit{pull-back} $\phi^{*}\omega$ of
+        $\omega$ is a $(0,k)$-tensor field on $M$ defined by
+        \begin{equation}
+            (\phi^{*}\omega)_x(v_1,\ldots,v_k)
+            :=
+            \omega_{\phi(x)}(T_x\phi(v_1),\ldots,T_x\phi(v_k))
+        \end{equation}
+        for any $x \in M$ and $v_1,\ldots,v_k \in T_xM$.
+    \end{defn}
+
+    \begin{defn}
+        A tensor field $U$ of type $(l,0)$ may be
+        \textit{pushed forward} from $M$ and $N$, giving
+        rise to an $(l,0)$-tensorfield $\phi_*U:$
+         \begin{equation}
+             (\phi_*U)_{\phi(x)}(\alpha_1,\ldots,\alpha_l)
+             :=
+             U_x(\phi^{*}_x\alpha_1,\ldots,\phi^{*}_x\alpha_l),
+        \end{equation}
+        where $\alpha_1,\ldots,\alpha_l \in
+        T_{\phi(x)}^{*}N$.
+    \end{defn}
+
+    Of course, if $\phi$ is a diffeomorphism, then $\phi_* =
+    (\phi^{-1})^{*}$.
+
+    An important class of tensor fields on a differentiable
+    manifold that play an important role in physical
+    applications are the differential forms.
+
+    \begin{defn}
+        A skew-symmetric tensor of type $(0,k)$ is called a
+        differential form of order $k$ (or simply a
+        $k$-form).
+    \end{defn}
+
+    Denote by $\Lambda^{k}(M)$ the space of $k$-forms on
+    $M$. Evidently, $\Lambda^{k}(M) = \{0\}$ for $k > n$.
+    The space of differential forms on $M$, denoted by
+    $\Lambda(M)$, splits into the following direct sum:
+    \begin{equation}
+        \Lambda(M)
+        = \bigoplus_{k=0}^{n} \Lambda^{k}(M),
+    \end{equation}
+    with $\Lambda^{0}(M) = C^{\infty}(M)$. The space
+    $\Lambda(M)$ is equipped with two basic operations, the
+    \textit{wedge product} and the \textit{exterior
+    derivative}.
+
+    \begin{defn}
+        A wedge product $\wedge$ (also called the exterior
+        or Grassmann product):
+         \begin{equation}
+            \wedge
+            : \Lambda^{k}(M) \times \Lambda^{l}(M)
+            \to \Lambda^{k+l}(M),
+        \end{equation}
+        is defined by
+        \begin{equation}
+            \alpha \wedge \beta
+            := \frac{(k+l)!}{k!l!} \bf A (\alpha \otimes
+            \beta),
+        \end{equation}
+        where $\bf A$ is the alternation operator which
+        selects the skew-symmetric part of the
+        $(0,k+l)$-tensor $\alpha \otimes \beta$.
+    \end{defn}
+    In terms of local coordinates $(x^{1},\ldots,x^{n})$ any
+    $k$-form $\alpha$ has the following component
+    representation:
+    \begin{equation}
+        \alpha
+        = \frac{1}{k!} \alpha_{i_1\ldots i_k}
+        dx^{i_1} \wedge \cdots \wedge dx^{i_k}.
+    \end{equation}
+    We can show that
+    \begin{equation}
+        (\alpha \wedge \beta)_{i_1\ldots i_k}
+        = \alpha_{[i_1\ldots i_k} \beta_{i_{k+1}\ldots
+        i_{k+l}]},
+    \end{equation}
+    where the square bracket stands for anti-symmetrization.
+
+    \begin{prop}
+        The wedge product satisfies
+        \begin{itemize}
+            \item $(\alpha \wedge \beta) \wedge \gamma =
+                \alpha \wedge (\beta \wedge \gamma)$,
+            \item $\alpha \wedge \beta = (-1)^{kl} \beta
+                \wedge \alpha$, where $\alpha \in
+                \Lambda^{k}(M)$ and $\beta \in
+                \Lambda^{l}(M)$.
+        \end{itemize}
+    \end{prop}
+
+    \begin{defn}
+        The \textit{interior product} is a contraction of a
+        vector field $v \in \mathfrak{X}(M)$ and a $k$-form
+        $\alpha$:
+        \begin{equation}
+            i_v
+            : \Lambda^{k}(M)
+            \to \Lambda^{k-1}(M),
+        \end{equation}
+        that is,
+        \begin{equation}
+            (i_v \alpha)_{i_1\ldots i_{k-1}}
+            := v^{j} \alpha_{j_1\ldots i_{k-1}}.
+        \end{equation}
+    \end{defn}
+
+    \begin{defn}
+        The exterior derivative
+        \begin{equation}
+            d
+            : \Lambda^{k}(M)
+            \to \Lambda^{k+1}(M)    
+        \end{equation}
+        is defined as follows:
+        \begin{equation}
+            d\alpha
+            = \frac{1}{k!} \frac{\partial \alpha_{i_1\ldots
+            i_k}}{\partial x^{j}} dx^{j} \wedge dx^{i_1}
+            \wedge \cdots \wedge dx^{i_k},
+        \end{equation}
+        for any $k$-form $\alpha$ represented as such in
+        local coordinates.
+    \end{defn}
+    Since a function $f \in \Lambda^{0}(M)$ is a $0$-form,
+    one defines its exterior derivative to be the $1$-form:
+    \begin{equation}
+        df
+        = \frac{\partial f}{\partial x^{i}} dx^{i}.
+    \end{equation}
+    If $M = \R^{n}$ and $(x^{1},\ldots,x^{n})$ are cartesian
+    coordinates, then $df$ reproduces the components of
+    $\text{grad }f$. Similarly, the components of the
+    exterior derivative of a $1$-form in cartesian
+    coordinates reproduces the components of the curl of a
+    vector field. And the exterior derivative of a $2$-form
+    represents the divergence of a vector field.
+
+    \begin{prop}
+        The exterior derivative satisfies
+        \begin{itemize}
+            \item $d^2\alpha = d(d\alpha) = 0$ for any
+                $\alpha \in \Lambda(M)$.
+            \item $d(\alpha \wedge \beta) = d\alpha \wedge
+                \beta + (-1)^{k} \alpha \wedge d\beta$ for
+                $\alpha \in \Lambda^{k}(M)$.
+        \end{itemize}
+    \end{prop}
+
+    For any smooth map $\phi : M \to N$, the pull-back
+    induces a map
+    \begin{equation}
+        \phi^{*} : \Lambda(N) \to \Lambda(M)
+    \end{equation}
+    between differential forms.
+
+    \begin{prop}
+        The pull-back operation commutes with wedge product
+        and exterior derivative, i.e.,
+        \begin{equation}
+            \phi^{*}(\alpha \wedge \beta)
+            = \phi^{*}\alpha \wedge \phi^{*}\beta,
+        \end{equation}
+        and
+        \begin{equation}
+            \phi^{*}(d\alpha)
+            = d(\phi^{*}\alpha),
+        \end{equation}
+        for any differential forms $\alpha$ and $\beta$ on
+        $N$. 
+    \end{prop}
+
+    To perform $n$-dimensional integration one needs
+    $n$-forms.
+
+    \begin{defn}
+        An $n$-dimensional manifold $M$ is orientable if and
+        only if there exists a nowhere vanishing $n$-form
+        $\tau$ on it.
+    \end{defn}
+
+    \begin{defn}
+        A Riemannian manifold $(M,g)$ is a smooth manifold
+        $M$ together with a smotth tensor $g$ of type
+        $(0,2)$, called a metric tensor, such that
+        \begin{itemize}
+            \item $g$ is symmetric,
+            \item for each $x \in M$, the bilinear form $g_x
+                : T_xM \times T_xM \to \R$ is nondegenerate.
+        \end{itemize}
+    \end{defn}
+
+
+\end{document}

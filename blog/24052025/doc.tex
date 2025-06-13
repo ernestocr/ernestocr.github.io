@@ -1,0 +1,152 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{tgtermes}
+%\usepackage[italic]{mathastext}
+
+%\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{
+%\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem*{sol}{Solution}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{exa}{Example}
+%\newtheorem{exeinner}{Exercise}
+%\newenvironment{exe}[1]{%
+%    \IfBlankTF{#1}
+%    {\renewcommand{theexeinner}{\unskip}}
+%    {\renewcommand\theexeinner{#1}}%
+%    \exeinner
+%}{\endexeinner}
+
+\title{On the PBR Theorem}
+\author{Ernesto Camacho}
+\begin{document}
+    \maketitle
+
+    It may be surprising that a century later after its
+    introduction, experts still do not agree on what the
+    quantum state really represents. Should each wave
+    function be associated to a physical state of a real
+    system or is it no more than a calculational tool
+    representing our state of knowledge of said system?
+    These questions are themselves an oversimplification,
+    and both viewpoints cover up shortcomings but are not
+    free of their own sets of problems. As a mathematical
+    tool, I feel adopting the statistical interpretation of
+    quantum theory to be the most pleasent and reasonable,
+    but it is very difficult to explain certain
+    experimentally verified results with this mindset. I'm
+    of course refering to a number of so-called no-go
+    theorems that severly limit the existence of ontological
+    models that reproduce the statistics of quantum theory.
+    
+    Today I want to look at a relatively recent no-go
+    theorem that starts out by assuming that the wave
+    function represents nothing more than information of a
+    subyacent physical state. In 2012 Matthew F. Pusey,
+    Jonathan Barrett and Terry Rudolph published a short
+    paper titled \textit{On the reality of the quantum
+    state} [CITE], in which they showed that under certain
+    assumptions, this idea is incompatible the predictions
+    of quantum theory. This post is an overview of that
+    result.
+
+    The authors start from Harrigan and Spekkens notion of
+    the idea that a quantum state corresponds directly to
+    reality or represents only information.
+
+    One of the main problems about these types of questions
+    is the fuzzy definition of reality. The difficulty is
+    not small but one must start from somewhere, PBR's
+    definition is the following.
+
+    \begin{defn}
+        A physical property of a system is a label $L$ for
+        which there exists disjoint probability
+        distributions of the system's physical state
+        $\lambda$.
+    \end{defn}
+
+    We assume there is a set of possible physical states
+    $\lambda$ in which a system can be. Let $\Lambda$ be a
+    measurable space which models this set. A preparation of
+    the quantum state $\psi_i$ is assumed to result in a
+    $\lambda$ sampled from a probability distribution
+    $\mu_i : \Lambda \to [0,1]$. Assume that it is possible
+    to prepare $n$ systems independently,\footnote{.} with
+    quantum states $\psi_{x_1},\ldots,\psi_{x_n}$ which
+    result in the physical states
+    $\lambda_1,\ldots,\lambda_n$ distributed according to
+    the product distribution
+
+    \begin{equation}
+        \mu_{x_1} \cdot \mu_{x_2} \cdots \mu_{x_n}.
+    \end{equation}
+   
+    Additionally assume that a fixed set of
+    $\lambda_1,\ldots,\lambda_n$ fixes the probability for
+    the outcome $k$ of a measurement according to some
+    conditional probability distribution 
+
+    \begin{equation}
+        p(k | \lambda_1,\ldots,\lambda_n).
+    \end{equation}
+
+    The law of total probability allows us to calculate the
+    operational probabilities as
+    
+    \begin{equation}
+        p(k|\Psi(x_1,\ldots,x_n))
+        = \int_{\Lambda^{n}} p(k|\lambda_1,\ldots,\lambda_n)
+        \mu_{x_1}(\lambda_1) \cdots \mu_{x_n}(\lambda_n) \,
+        d\lambda_1 \cdots d\lambda_n.
+    \end{equation}
+
+    Now suppose an experiment is carried out in which with
+    high confidence it can be ascertained that the
+    probability for each measurement outcome is within
+    $\varepsilon$ of the predicted quantum probability for
+    some small $\varepsilon > 0$. The final result relates
+    $\varepsilon$ to the total variation dsitance between
+    $\mu_0$ and $\mu_1$ defined by
+    
+    \begin{equation}
+        D(\mu_0,\mu_1)
+        = \frac{1}{2} \int_\Lambda |\mu_0(\lambda) -
+        \lambda_1(0)| \, d\lambda.
+    \end{equation}
+
+    If $D(\mu_0,\mu_1) = 1$ then the probability of
+    $\lambda$ being compatible with both preparations is
+    zero. 
+    
+\end{document}

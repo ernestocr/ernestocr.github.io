@@ -1,0 +1,634 @@
+\documentclass[12pt,draft]{article}
+
+\usepackage[margin=1.3in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\usepackage{tikz}
+\usepackage{blochsphere}
+%\usetikzlibrary{external}
+%\tikzexternalize
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem*{sol}{Solution}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{exa}{Example}
+
+\onehalfspacing
+
+\title{The Montina Model}
+\author{Ernesto Camacho}
+\begin{document}
+    \maketitle
+
+    As part of my research I've been tasked with studying
+    the Montina model and how it could possibly relate to
+    quasi-probability representations and negativity as an
+    identifier of true quantum phenomena. The main questions
+    to solve, although not all entirely related to the
+    Montina model, are the following
+    \begin{enumerate}
+        \item In what way is the reduction of the phase
+            space of the 8-state model related to negativity
+            of frame representations.
+        \item What benefits does Montina achieve relative to
+            the KS-model?
+        \item Is the increased ontic space (relative to the
+            KS-model) for ``more non-negativity''?
+        \item In what sense is the 8-state model contextual?
+        \item In what sense is the KS-model contextual?
+        \item In what sense is the Montina model contextual?
+        \item Look into the draft.
+    \end{enumerate}
+
+    Alberto Montina's main interest in his 2011 paper
+    \textit{Approximate simulation of entanglement with a
+    linear cost of communication} was the simulation of the
+    nonlocal correlations of entangled bipartite systems and
+    the cost of communication needed to realize the
+    simulation. We are interested in his model as an
+    ontological model of a single qubit.
+
+    \section{The Kochen-Specker model}
+
+    Montina considers prepare and measure scenarios for a
+    single qubit and gives a reformulation of the
+    Kochen-Specker (KS) model for the spin of a free
+    electron. This is from their 1967 paper, where they
+    describe a hidden variable model for the qubit.  It can
+    be used as a classical model of a quantum channel where
+    the communicated classical information is infinite and
+    encoded in a three dimensional unit vector.  Montina's
+    contribution in this sense, is to show that it can be
+    made into a model with finite communication cost.
+
+    The experiment that Montina set out to simulate is the
+    following. Bob prepares a qubit in a quantum state
+    represented by a Bloch vector $b$. He sends the
+    qubit to Alice, who performs a projective measurement
+    $M_A = \{a_1, a_2\}$ with outcome states $
+    a_1$ and $a_2 \equiv -a_1$. 
+
+    \textbf{The protocol.} The classical simulation for this
+    experiment is a reformulation of the KS model, and is
+    given as follows.  Given the Bloch vector $b$
+    corresponding to some preparation, Bob generates a unit
+    vector $x$ according to the probability distribution
+    \begin{equation}
+        \rho(x | b)
+        = \frac{1}{\pi} \, b \cdot x \,
+        \theta(b \cdot x),
+        \label{eqn:ks-rho}
+    \end{equation}
+    where $\theta(z)$ is the Heaviside function. He then
+    sends $x_1$ to Alice, which constitutes a transmission
+    of infinite information. Given the vector pair $M_A =
+    \{a_1, a_2\}$, Alice generates the outcome $a_\alpha$
+    according to the conditional probability
+    \begin{equation}
+        P(\alpha | x; M_A)
+        = \theta(a_\alpha \cdot x)
+        = \begin{cases}
+            1 & \text{if } a_\alpha \cdot x > 0
+            \\
+            0 & \text{otherwise.}
+        \end{cases}
+    \end{equation}
+    This model gives the correct quantum probability for the
+    outcomes:
+    \begin{equation}
+        \text{Pr}(\alpha | b)
+        = \frac{1}{2} \left( 1 + a_\alpha \cdot b
+        \right) 
+        = \int P(\alpha | x ; M_A) \rho(x, b) \, d x.
+    \end{equation}
+
+    {
+        \color{blue} Let's reformulate Montina's formulation
+        of the KS-model in terms of ontological
+        representations of an operational theory. We require
+        two maps
+        \begin{equation}
+            \mu
+            : \mathcal{S} \to \mathcal{P}(S^2)
+            \quad\text{and}\quad
+            \xi
+            : \mathcal{M} \to \mathcal{F}(S^2, \R),
+        \end{equation}
+        where $\mathcal{S}$ is the space of quantum states,
+        in this case all qubit pure states, which can be
+        viewed as $S^2$; and $\mathcal{M}$ is the set of
+        orthogonal projections, which again, coincides with
+        $S^2$. With these definitions, $\mu(\cdot | b)$ is a
+        probability measure over the ontic state space $S^2$
+        and $\xi(\alpha | \cdot)$ is a response function, or
+        a value assignment corresponding to a projective
+        measurement.
+
+        To a given preparation $b \in S^2$, the
+        Montina/KS-model assigns the following probability
+        measure: 
+        \begin{equation}
+            \mu(x | b)
+            = \frac{1}{\pi} \, b \cdot x \, \theta(b \cdot
+            x)
+            \quad \text{for all } x \in S^2.
+        \end{equation}
+        Then, given an ontic state $x$, for any orthogonal
+        measurement $M = \{a_\alpha : \alpha = 1,2 \}$
+        we have
+        \begin{equation}
+            \xi(\alpha | x) 
+            = \theta(a_\alpha \cdot x).
+        \end{equation}
+        Clearly $\sum_{\alpha}^{} \xi(\alpha | x) = 1$ for
+        all $x \in S^2$. The notation and definitions still
+        leave room for some ambigüity, and in particular it
+        would be more appropriate to label the response
+        functions by the \textit{pair} of antipodal points,
+        i.e., the measurement context. But, obviously in a
+        two-dimensional Hilbert space, there is no room for
+        context as the choice of a projection operator
+        automatically picks out the PVM.
+
+        To verify that this model truely is an ontological
+        model, we first show that $\mu$ really does map
+        states to probability measures. Let $H_b := \{x \in
+        S^2 : b \cdot x > 0\}$, i.e., the hemisphere whose
+        great circle is perpendicular to the vector $b$.
+        Then
+        \begin{align}
+            \int_{S^2} \mu(x | b) \, d\Omega(x)
+            &= \int_{S^2} \frac{1}{\pi} \, b \cdot x \,
+            \theta(b \cdot x) \, d\Omega(x) \\
+            &= \frac{1}{\pi} \int_{H_b} b \cdot x \,
+            d\Omega(x) \\
+            &= \frac{1}{\pi}
+            \int_0^{2\pi} \int_{0}^{\pi / 2}
+            \cos(\theta) \sin(\theta) \, d\theta \, d\phi \\
+            &= 2 \int_0^{\pi / 2} \cos(\theta) \sin(\theta)
+            \, d\theta \\
+            &= 1.
+        \end{align}
+        If $P_a$ corresponds to the projection operator onto
+        the state $a$, then to satisfy the Born rule, we
+        must show that
+        \begin{equation}
+            \text{Pr}(\alpha | b)
+            = \Tr(P_{a_\alpha} P_b)
+            = \frac{1}{2} \left(
+                1 + a_\alpha \cdot b
+            \right), 
+        \end{equation}
+        is equal to
+        \begin{equation}
+            \int_{S^2} \xi(\alpha | x) \mu(x | b) \,
+            d\Omega(x).
+        \end{equation}
+        First observe that
+        \begin{align}
+            \int_{S^2} \xi(\alpha | x) \mu(x | b) \,
+            d\Omega(x)
+            &= \int_{S^2} \theta(a_\alpha \cdot x) \left[
+                \frac{1}{\pi} \, b \cdot x \, \theta(b \cdot
+                x) 
+            \right] \, d\Omega(x) \\
+            &= \frac{1}{\pi} \int_{H_{a_\alpha} \cap H_b}
+            b \cdot x \, d\Omega(x).
+        \end{align}
+        So we have a integral over a spherical lune defined
+        by two hemispheres. To simplify this somewhat
+        non-trivial integral we must choose coordinates
+        wisely.  Geometrically we choose a polar axis
+        perpendicular to both the preparation $b$ and
+        measurement $a$, so that the integration region is
+        defined as a range of allowed azimuthal angles. Let
+        $\alpha$ be the angle between $b$ and $a$ and choose
+        coordinates such that $b = (0,1,0)$ and $a =
+        (-\sin\alpha, \cos\alpha,0)$. If $x =
+        (\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)$,
+        then $x \in H_b \cap H_b$ if
+        \begin{equation}
+            b \cdot x
+            = \sin\theta\sin\phi > 0,
+        \end{equation}
+        which implies that $\phi \in (0,\pi)$ (since
+        $\sin\theta > 0$ for $\theta \in (0,\pi)$).
+        Furthermore, $x$ must satisfy
+        \begin{align}
+            a \cdot x
+            &= -\sin\alpha \sin\theta\cos\phi + \cos\alpha
+            \sin\theta\sin\phi \\
+            &= \sin\theta \left( 
+                -\sin\alpha\cos\phi + \cos\alpha\sin\phi
+            \right) \\
+            &= \sin\theta \sin(\phi - \alpha) \\
+            &> 0,
+        \end{align}
+        implying that $\phi - \alpha \in (0,\pi)$, i.e.,
+        $\phi \in (\alpha,\alpha + \pi)$. Satisfying both
+        conditions means that $\phi \in (\alpha, \pi)$.
+        Therefore
+        \begin{align}
+            \int_{H_b \cap H_a} b \cdot x \, d\Omega(x)
+            &= \int_{0}^{\pi} \int_{\alpha}^{\pi} \sin\phi
+            \sin^2\theta \, d\phi \, d\theta \\
+            &= \frac{\pi}{2}
+            \int_{\alpha}^{\pi} \sin\phi \, d\phi
+            \\
+            &= \frac{\pi}{2} \left(
+                -\cos(\pi) + \cos(\alpha)
+            \right) \\
+            &= \frac{\pi}{2} \left( 
+                1 + \cos(\alpha)
+            \right). 
+        \end{align}
+        Since $\cos(\alpha) = b \cdot x$ the calculation is
+        complete.
+        
+        This model gives a deterministic explanation for
+        spin measurements on a free electron. It does not
+        deal with dynamics. Furthermore, a natural question
+        arises, is the model measurement non-contextual? At
+        least for projection value measures the question
+        does not even arise, since the context is fully
+        determined once a choice of projector is made.
+    }
+
+    So Montina has simply reformulated the KS-model for a
+    qubit, which deals with pure states, spin measurements
+    and is non-contextual. For his communication scenario,
+    the model involves the transmission of an infinite
+    amount of information, i.e., the unit vector $x$ which
+    is drawn from a distribution that is \textit{dependent}
+    on the preparation $b$. To show how this can be done
+    with only two bits of classical information, Montina
+    first modifies the KS-model to include an additional
+    hidden variable in the form of another unit vector.
+
+    Define the vectors $y_1 := x_1 + x_2$ and $y_2 := x_1 -
+    x_2$.  The probability distribution $\rho$ in Eq.
+    \eqref{eqn:ks-rho} can be obtained from the following
+    \textit{uniform} distribution
+    \begin{equation}
+        \rho(x_1, x_2 | b)
+        = \frac{1}{4\pi^2} \theta(b \cdot y_1)
+        \theta(b \cdot y_2)
+    \end{equation}
+    by integrating out the unit vector $x_2$. 
+    {
+        \color{blue}
+        So we now have a new map from states to probability
+        measures over the ontic space $S^2 \times S^2$
+        defined as the uniform distribution
+        \begin{equation}
+            \mu(x_1, x_2 | b)
+            = \frac{1}{4\pi^2}
+            \theta(b \cdot y_1) \theta(b \cdot y_2),
+        \end{equation}
+        where $y_1 = x_1 + x_2$ and $y_2 = x_1 - x_2$.
+        Marginalization over $x_2$ should recover
+        $\mu(\cdot | b)$. First note that the $\mu$ is
+        non-zero only when
+        \begin{equation}
+            b \cdot (x_1 + x_2) > 0
+            \quad\text{and}\quad
+            b \cdot (x_1 - x_2) > 0,
+        \end{equation}
+        equivalently
+        \begin{equation}
+            -b \cdot x_1 < b \cdot x_2 < b \cdot x_1,
+        \end{equation}
+        for fixed vectors $b$ and $x_1$. Suppose $b =
+        (0,0,1)$, and let $\theta_1$ be the angle between
+        vectors $b$ and $x_1$, therefore the inequality
+        above can be expressed as $-\cos\theta_1 <
+        \cos\theta < \cos\theta_1$, which implies that
+        $\cos^{-1}(b \cdot x_1) < \theta <
+        \cos^{-1}(-b \cdot x_1)$. And so the integral is
+        \begin{align}
+            \int_{S^2} \mu(x_1,x_2|b) d\Omega(x_2) 
+            &= \frac{1}{4\pi^2} \int_{S^2} 
+            \theta(b \cdot (x_1 + x_2)) \theta(b \cdot (x_1
+            - x_2)) \, d\Omega(x_2) \\
+            %&= \frac{1}{4\pi^2}
+            %\int_{\cos^{-1}(b \cdot x_1)}^{\cos^{-1}(-b
+            %\cdot x_1)}
+            %2\pi \sin(\theta) \, d\theta \\
+            &= \frac{1}{4\pi^2}
+            \int_{b \cdot x_1}^{-b \cdot x_1}
+            2\pi \sin(\theta) \, d\theta \\
+            %&= \frac{1}{2\pi} \left[
+            %    \cos(\theta)
+            %\right]_{-\cos^{-1}(\theta_1)}^{\cos^{-1}(\theta_1)}
+            %\\
+            &= \frac{1}{2\pi} \left( 
+                -(-b \cdot x_1) - -(b \cdot x_1)
+            \right) \\
+            &= \frac{1}{\pi} \, b \cdot x_1.
+        \end{align}
+        To define the marginalized function for all of
+        $S^2$, we add on the Heaviside function to obtain
+        the original distribution
+        \begin{equation}
+            \mu(x_1 | b)
+            = \frac{1}{\pi} \, b \cdot x_1 \, \theta(b \cdot
+            x_1)
+            \quad
+            \text{for all } x_1 \in S^2.
+        \end{equation}
+        The ontological model now reproduces the Born rule
+        by averaging the response function $\xi(\alpha|x_1)$ 
+        by the probability function $\rho(x_1,x_2|b)$ over
+        the ontic space $S^2 \times S^2$.
+    }
+
+    The ontic space is now sampled from a uniform
+    distribution over subsets defined by the preparation
+    procedure $b$. For Montina's considerations, this still
+    constitutes and infinite amount of information. We can
+    get another exact simulation of a qubit by introducing
+    two more hidden variables $n_1$ and $n_2$ which are one
+    bit each, drawn from $\{-1,1\}$. As we will see, this
+    allows for the sampling of the two unit vectors to be
+    \textit{independent} of $b$, which for communication
+    purposes reduces the transmission cost. Montina defines
+    a probability distribution of the two unit vectors
+    conditioned on the bits, 
+    \begin{equation}
+        \rho(x_1, x_2 | n_1, n_2; b)
+        = \frac{1}{4\pi^2} \, \theta(n_1 b \cdot 
+        y_1) \, \theta(n_2 b \cdot y_2),
+    \end{equation}
+    and a response function
+    \begin{equation}
+        P(\alpha | x_1, x_2, n_1, n_2; M_A)
+        = \theta\left[a_\alpha \cdot (n_1 y_1 +
+        n_2 y_2)\right],
+    \end{equation}
+    for any choice $n_i = \pm 1$. Any particular choice
+    defines an ontological model which can be
+    derived from the original two vector model above. For
+    example with $n_1 = 1$ and $n_2 = -1$, these equations
+    can be derived from the original distribution by
+    switching $x_1$ and $x_2$. With $n_1 = -1$ and $n_2 =
+    -1$, we have to flip the direction of $x_1$ and $x_2$.
+    Finally, with $n_1= -1$ and $n_2 = 1$, we have to
+    exchange and flip the vectors.
+    {
+        \color{red}
+        Let $n_1 = 1$ and $n_2 = -1$. Then the Montina model
+        defines
+        \begin{align}
+            \rho(x_1, x_2, | 1, -1, b)
+            &= \frac{1}{4\pi^2} \, 
+            \theta(b \cdot y_1) \, \theta(-b \cdot y_2) \\
+            &= \frac{1}{4\pi^2} \,
+            \theta(b \cdot (x_2 + x_1)) \, 
+            \theta(b \cdot (x_2 - x_1)),
+        \end{align}
+        and
+        \begin{align}
+            P(\alpha | x_1, x_2, 1, -1, M_A)
+            &= \theta\left[
+                a_{\alpha} \cdot (y_1 - y_2)
+            \right] \\
+            &= \theta\left[
+                a_\alpha \cdot (2 x_2)
+            \right] \\
+            &= \theta(a_\alpha \cdot x_2).
+        \end{align}
+        As stated above, this is just the original model
+        with the vectors $x_1$ and $x_2$ switched. The other
+        options can be similarly derived. The important
+        thing is that because of this all of these models
+        simulate the qubit exactly.
+    }
+
+    Now consider the scenario in which the indices $n_i$ are
+    randomly generated with probability $\rho_I(n_1,n_2) = 1
+    / 4$. Then the \textit{joint} probability distribution
+    of $x_i$ and $n_i$ can be suitably written in the
+    form
+    \begin{equation}
+        \rho(x_1, x_2, n_1, n_2 | b)
+        = \rho(n_1, n_2, | x_1, x_2; b)
+        \rho_v(x_1, x_2),
+    \end{equation}
+    where
+    \begin{equation}
+        \rho(n_1, n_2, | x_1, x_2; b)
+        := \theta(n_1 b \cdot y_1) \theta(n_2 
+        b \cdot y_2)
+    \end{equation}
+    and
+    \begin{equation}
+        \rho_v(x_1, x_2)
+        = \frac{1}{(4\pi)^2}.
+    \end{equation}
+    This model also reproduces the correct statistics but
+    also has the property that the marginal probability
+    distribution $\rho_v(x_1, x_2)$ of the vectors
+    $x_1$ and $x_2$ does not depend on the
+    prepared state $b$. The dependence is only in the
+    conditional distribution $\rho(n_1,n_2 | x_1, 
+    x_2; b)$ of the discrete indices $n_i$.
+
+    {
+        \color{red}
+        The joint probability measure $\rho(\cdot|b) : S^2
+        \times S^2 \times \{-1,1\}^2 \to [0,1]$ can be
+        expressed in two equivalent forms:
+        \begin{equation}
+            \rho(x_1,x_2|n_1,n_2,b)\rho_I(n_1,n_2),
+            \quad\text{and}\quad
+            \rho(n_1,n_2,|x_1,x_2,b)\rho_v(x_1,x_2)
+        \end{equation}
+        for uniform distributions $\rho_v$ and $\rho_I$.
+        To see this, note that by definition of the
+        distribution of the vectors conditioned on the bits,
+        we have
+        \begin{align}
+            p(x_1,x_2|n_1,n_2,b) \rho_I(n_1,n_2)
+            &= \left(
+                \frac{1}{4\pi^2} 
+            \theta(n_1 b \cdot y_1)\theta(n_2 b \cdot y_2) 
+            \right) \left( \frac{1}{4} \right) \\
+            &= \left( \theta(n_1 b \cdot y_1)\theta(n_2 b \cdot
+            y_2)\right) \left( 
+                \frac{1}{(4\pi)^2}
+            \right) \\
+            &= \rho(n_1,n_2|x_1,x_2,b) \rho_v(x_1,x_2),
+        \end{align}
+        so
+        \begin{equation}
+            \rho_v(x_1,x_2)
+            = \frac{1}{(4\pi)^2}
+            \quad\text{and}\quad
+            \rho_n(n_1,n_2)
+            = \frac{1}{4}.
+        \end{equation}
+        Essentially, the randomness has been shifted from
+        the unit vectors to the bits, i.e., the joint
+        distribution can be expressed as the product of
+        distribution of the bits conditional on the unit
+        vectors, which are uniformly distributed. The
+        important advantage with this expression is the the
+        unit vectors do not depend on $b$ anymore and can
+        be seen as \textit{shared} randomness between the
+        parties.
+    }
+
+    So this procedure is a protocol for simulating the
+    communication of a qubit with just two bits of classical
+    communication. {\color{blue}
+        Bob and Alice share the random vectors $x_1$
+        and $x_2$, generated according to the uniform
+        probability distribution; then, given the
+        preparation $b$, Bob generates the discrete indices
+        $n_i$ according to the rule; he then sends them to
+        Alice, whom, given a measurement $M_A$, generates
+        the outcome $a_\alpha$ in a deterministic manner.
+    } The protocol can be summarized as follows:
+    \begin{enumerate}
+        \item Alice and Bob hold the same random pair of
+            unit vectors $(x_1, x_2) \in S^2
+            \times S^2$.
+        \item Bob prepares a quantum state according to
+            $b$, and deterministically sets the two
+            bits according to
+            \begin{equation}
+                n_1 = \theta(b \cdot y_1)
+                \quad\text{and}\quad
+                n_2 = \theta(b \cdot y_2),
+            \end{equation}
+            where $y_1 = x_1 + x_2$ and $
+            y_2 = x_1 - x_2$. He then sends the
+            two bits to Alice.
+        \item Alice outputs the outcome $\alpha$ whose Bloch
+            vector maximizes 
+            \begin{equation}
+                a_\alpha \cdot (n_1 y_1 + n_2 y_2).
+            \end{equation}
+    \end{enumerate}
+
+
+    \section{Dynamics}
+
+    \subsection{Measurement collapse}
+
+    A feature of the statistical interpretation of quantum
+    theory is that the collapse of the wave function induced
+    by measurement is nothing more than an actualization of
+    the probability distribution. In the KS-model, we see
+    that after a measurement outcome, the probability
+    measure corresponding to the state $b$ now becomes the
+    measure corresponding to the observed outcome projector
+    $a_\alpha$.
+
+    \subsection{Unitary transformations}
+
+    Unitary transformations in the KS model simply consist
+    of applying the corresponding $O(3)$ rotation on the
+    ontic state $x_1$, for a given $U \in \text{SU}(2)$
+    acting on the preparation $b$. In the Montina model, the
+    rotation must be applied to both unit vectors, but as we
+    will see, the classical bits stay unaffected.
+
+    Recall that a rotation $R_n(\theta)$ of angle $\theta$
+    about the axis given by the vector $n$, corresponds to
+    the unitaires $\pm U$ defined by
+    \begin{equation}
+        U
+        = \exp\left( -\frac{i}{2} \theta \, n \cdot \sigma
+        \right), 
+    \end{equation}
+    where $\sigma$ is the ``vector'' of Pauli matrices. If
+    $U$ acts on the state $P_b$ via $U P_b U^{\dag}$, then
+    the corresponding Bloch vector $b$ is transformed by
+    $R_n(\theta)$. Since the dot product is invariant under
+    rotations, the transformed probability measure
+    $\mu(\cdot|b)$ leaves the statistics unaltered, and so
+    state transformations simply induce a transformation on
+    the ontic space. For the KS-model, if $R_U$ corresponds
+    to $U$, then 
+    \begin{align}
+        \mu(x | R_U b)
+        &= \frac{1}{\pi} (R_U b) \cdot x \, \theta(R_U b
+        \cdot x) \\
+        &= \frac{1}{\pi} (R_U b) \cdot (R_U R_U^{-1} x) \,
+        \theta((R_U b) \cdot (R_U R_U^{-1}x)) \\
+        &= \frac{1}{\pi} b \cdot (R_U^{-1}x) \,
+        \theta(b \cdot R_U^{-1}x) \\
+        &= \mu(R_U^{-1} x | b).
+    \end{align}
+    In other words, the KS-model is covariant under
+    $\text{SU}(2)$. For Montina's model we have a similar
+    situation, the unit vectors are rotated but the bits
+    stay the same. For the joint distribution $\rho$ we see
+    that
+    \begin{align}
+        \rho(x_1,x_2,n_1,n_2 | R_U b)
+        &= \rho(n_1,n_2 | x_1,x_2; R_U b) \rho_v(x_1,x_2) \\
+        &= \frac{1}{(4\pi)^2} 
+        \theta(n_1 (R_U b) \cdot y_1) \theta(n_2 (R_U b)
+        \cdot y_2) \\
+        &= \frac{1}{(4\pi)^2} \theta(n_1 b \cdot
+        (R_U^{-1}y_1)) \theta(n_2 b \cdot (R_U^{-1} y_2)) \\
+        &= \rho(n_1,n_2 | R_U^{-1}x_1, R_U^{-1}x_2; R_U b)
+        \rho_v(R_U^{-1}x_1, R_U^{-1}x_2) \\
+        &= \rho(R_U^{-1}x_1, R_U^{-1}x_2, n_1, n_2 | R_U b).
+    \end{align}
+    So Montina's model is also covariant under
+    $\text{SU}(2)$, and the corresponding action on the
+    ontic space is just the $\text{SO}(3)$ rotation on both
+    unit vectors. Therefore this model can deal with unitary
+    channels acting on pure states. The question of whether
+    it can deal with arbitrary quantum channels and mixed
+    states becomes more subtle and essentially depends on
+    whether the ontological is convex.
+
+    \subsection{Convexity of the Montina model}
+
+    \subsection{Process fidelity}
+
+    In the glassboard Joseph wrote:
+    \begin{equation}
+        F(G, \tilde G)
+        = \mathbf{E}_{g \in C_1}\left[
+        \frac{1}{d^2} \Tr\left( \tilde G \cdot G^{-1}
+        \right) \right]
+    \end{equation}
+    where $G := g \otimes \overline{g}$ for $g \in
+    \text{SU}(2)$ and $\tilde G := \tilde g \otimes
+    \overline{\tilde g}$.
+
+\end{document}
+

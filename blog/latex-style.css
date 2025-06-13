@@ -1,4 +1,4 @@
-body {
+section.post {
     /*font-family: Palatino, Palatino Linotype;*/
     font-family: Verdana,Helvetica,Arial,sans-serif;
     /*font-weight: lighter;*/
@@ -6,10 +6,27 @@ body {
     color: #000 !important;
 }
 
-p {
-    margin: 1em 0;
+section.post {
+    margin-top: 1em;
 }
 
-nav {
-    margin-top: 0.05em;
+section.post p {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+.maketitle br {
+    display: none;
+}
+
+.maketitle .titleHead {
+    text-align: left;
+}
+
+.maketitle .author {
+    display: none;
+}
+
+.maketitle .date {
+    text-align: left;
 }
