@@ -1,0 +1,415 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmss   font-family: sans-serif;
+htfcss: cmssbx  font-family: sans-serif; font-weight: bold;
+htfcss: cmssbxo  font-family: sans-serif; font-style: oblique; font-weight: bold;
+htfcss: cmssdc  font-family: sans-serif;
+htfcss: cmssi  font-family: sans-serif; font-style: oblique;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+File: orbital.html
+File: orbital.css
+File: orbital.tmp
+File: orbital.tmp
+File: orbital.tmp
+File: orbital.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+Css: h1,h2,h3,h4,h5 { line-height:1.2; }
+Css: @media print{ body{ max-width:none } }
+Css: .partHead, .likepartHead { font-size: 2em; }
+Css: .chapterHead, .likechapterHead { font-size: 1.7411em; }
+Css: .sectionHead, .likesectionHead { font-size: 1.5157em; }
+Css: .subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
+Css:  @media (prefers-color-scheme: dark) { img[src^="orbital"]{filter: invert(1); } } 
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: .subsectionToc, .likesubsectionToc {margin-left:1em;}
+Css: .subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:3em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:4em;}
+Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: figure.figure {text-align:center;}
+Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: p + figcaption, img + figcaption{margin-top: 1em;}
+Css: .abstract{margin:1em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: div.align {text-align: center;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: img[src="orbital0x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[2] ==> orbital0x.svg ---
+Css: img[src="orbital1x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[3] ==> orbital1x.svg ---
+Css: img[src="orbital2x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[4] ==> orbital2x.svg ---
+Css: img[src="orbital3x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[5] ==> orbital3x.svg ---
+Css: img[src="orbital4x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[6] ==> orbital4x.svg ---
+Css: img[src="orbital5x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[7] ==> orbital5x.svg ---
+Css: img[src="orbital6x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[8] ==> orbital6x.svg ---
+Css: img[src="orbital7x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[9] ==> orbital7x.svg ---
+Css: img[src="orbital8x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[11] ==> orbital8x.svg ---
+Css: img[src="orbital9x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[12] ==> orbital9x.svg ---
+Css: img[src="orbital10x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[14] ==> orbital10x.svg ---
+Css: img[src="orbital11x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[15] ==> orbital11x.svg ---
+Css: img[src="orbital12x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[16] ==> orbital12x.svg ---
+Css: img[src="orbital13x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[17] ==> orbital13x.svg ---
+Css: img[src="orbital14x.svg"]{vertical-align:-21.92977759693326%}
+--- needs --- orbital.idv[18] ==> orbital14x.svg ---
+Css: img[src="orbital15x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[19] ==> orbital15x.svg ---
+Css: img[src="orbital16x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[20] ==> orbital16x.svg ---
+Css: img[src="orbital17x.svg"]{vertical-align:-11.45032246161071%}
+--- needs --- orbital.idv[21] ==> orbital17x.svg ---
+Css: img[src="orbital18x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[22] ==> orbital18x.svg ---
+Css: img[src="orbital19x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[23] ==> orbital19x.svg ---
+--- needs --- orbital.idv[24] ==> orbital20x.svg ---
+Css: img[src="orbital21x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[26] ==> orbital21x.svg ---
+Css: img[src="orbital22x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[27] ==> orbital22x.svg ---
+Css: img[src="orbital23x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[28] ==> orbital23x.svg ---
+Css: img[src="orbital24x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[29] ==> orbital24x.svg ---
+Css: img[src="orbital25x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[30] ==> orbital25x.svg ---
+Css: img[src="orbital26x.svg"]{vertical-align:-28.45528455284553%}
+--- needs --- orbital.idv[31] ==> orbital26x.svg ---
+Css: img[src="orbital27x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[32] ==> orbital27x.svg ---
+Css: img[src="orbital28x.svg"]{vertical-align:-5.411964490517498%}
+--- needs --- orbital.idv[33] ==> orbital28x.svg ---
+Css: img[src="orbital29x.svg"]{vertical-align:-11.45032246161071%}
+--- needs --- orbital.idv[34] ==> orbital29x.svg ---
+Css: img[src="orbital30x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[35] ==> orbital30x.svg ---
+Css: img[src="orbital31x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[36] ==> orbital31x.svg ---
+Css: img[src="orbital32x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[37] ==> orbital32x.svg ---
+--- needs --- orbital.idv[38] ==> orbital33x.svg ---
+Css: img[src="orbital34x.svg"]{vertical-align:-20.88168531922188%}
+--- needs --- orbital.idv[40] ==> orbital34x.svg ---
+--- needs --- orbital.idv[41] ==> orbital35x.svg ---
+Css: img[src="orbital36x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[43] ==> orbital36x.svg ---
+Css: img[src="orbital37x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[44] ==> orbital37x.svg ---
+--- needs --- orbital.idv[45] ==> orbital38x.svg ---
+Css: img[src="orbital39x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[47] ==> orbital39x.svg ---
+--- needs --- orbital.idv[48] ==> orbital40x.svg ---
+Css: img[src="orbital41x.svg"]{vertical-align:-21.92977759693326%}
+--- needs --- orbital.idv[50] ==> orbital41x.svg ---
+Css: img[src="orbital42x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[51] ==> orbital42x.svg ---
+Css: img[src="orbital43x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[52] ==> orbital43x.svg ---
+Css: img[src="orbital44x.svg"]{vertical-align:-21.95898915156455%}
+--- needs --- orbital.idv[54] ==> orbital44x.svg ---
+Css: img[src="orbital45x.svg"]{vertical-align:-21.87498927115985%}
+--- needs --- orbital.idv[55] ==> orbital45x.svg ---
+Css: img[src="orbital46x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[56] ==> orbital46x.svg ---
+Css: img[src="orbital47x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[57] ==> orbital47x.svg ---
+Css: img[src="orbital48x.svg"]{vertical-align:-21.95898915156455%}
+--- needs --- orbital.idv[59] ==> orbital48x.svg ---
+Css: img[src="orbital49x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[60] ==> orbital49x.svg ---
+Css: img[src="orbital50x.svg"]{vertical-align:-21.95898915156455%}
+--- needs --- orbital.idv[61] ==> orbital50x.svg ---
+Css: img[src="orbital51x.svg"]{vertical-align:-22.15193504143352%}
+--- needs --- orbital.idv[62] ==> orbital51x.svg ---
+Css: img[src="orbital52x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[63] ==> orbital52x.svg ---
+--- needs --- orbital.idv[64] ==> orbital53x.svg ---
+Css: img[src="orbital54x.svg"]{vertical-align:-21.67114432037612%}
+--- needs --- orbital.idv[66] ==> orbital54x.svg ---
+Css: img[src="orbital55x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[67] ==> orbital55x.svg ---
+Css: img[src="orbital56x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[68] ==> orbital56x.svg ---
+Css: img[src="orbital57x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[69] ==> orbital57x.svg ---
+Css: img[src="orbital58x.svg"]{vertical-align:-28.45528455284553%}
+--- needs --- orbital.idv[70] ==> orbital58x.svg ---
+Css: img[src="orbital59x.svg"]{vertical-align:-21.95898915156455%}
+--- needs --- orbital.idv[71] ==> orbital59x.svg ---
+--- needs --- orbital.idv[72] ==> orbital60x.svg ---
+--- needs --- orbital.idv[74] ==> orbital61x.svg ---
+Css: img[src="orbital62x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[76] ==> orbital62x.svg ---
+Css: img[src="orbital63x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[77] ==> orbital63x.svg ---
+Css: img[src="orbital64x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[78] ==> orbital64x.svg ---
+Css: img[src="orbital65x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[79] ==> orbital65x.svg ---
+--- needs --- orbital.idv[80] ==> orbital66x.svg ---
+--- needs --- orbital.idv[82] ==> orbital67x.svg ---
+Css: img[src="orbital68x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[84] ==> orbital68x.svg ---
+Css: img[src="orbital69x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[85] ==> orbital69x.svg ---
+Css: img[src="orbital70x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[86] ==> orbital70x.svg ---
+--- needs --- orbital.idv[88] ==> orbital71x.svg ---
+Css: img[src="orbital72x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[89] ==> orbital72x.svg ---
+Css: img[src="orbital73x.svg"]{vertical-align:-25.83718601417717%}
+--- needs --- orbital.idv[90] ==> orbital73x.svg ---
+Css: img[src="orbital74x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[91] ==> orbital74x.svg ---
+Css: img[src="orbital75x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[92] ==> orbital75x.svg ---
+Css: img[src="orbital76x.svg"]{vertical-align:-13.6707765821042%}
+--- needs --- orbital.idv[93] ==> orbital76x.svg ---
+Css: img[src="orbital77x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[94] ==> orbital77x.svg ---
+--- needs --- orbital.idv[95] ==> orbital78x.svg ---
+Css: img[src="orbital79x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[96] ==> orbital79x.svg ---
+Css: img[src="orbital80x.svg"]{vertical-align:-29.51275868364886%}
+--- needs --- orbital.idv[97] ==> orbital80x.svg ---
+Css: img[src="orbital81x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[98] ==> orbital81x.svg ---
+Css: img[src="orbital82x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[99] ==> orbital82x.svg ---
+Css: img[src="orbital83x.svg"]{vertical-align:-25.83718601417717%}
+--- needs --- orbital.idv[100] ==> orbital83x.svg ---
+Css: img[src="orbital84x.svg"]{vertical-align:-16.73840713823166%}
+--- needs --- orbital.idv[101] ==> orbital84x.svg ---
+--- needs --- orbital.idv[102] ==> orbital85x.svg ---
+Css: img[src="orbital86x.svg"]{vertical-align:-33.04817499970654%}
+--- needs --- orbital.idv[104] ==> orbital86x.svg ---
+Css: img[src="orbital87x.svg"]{vertical-align:-17.99989379837439%}
+--- needs --- orbital.idv[105] ==> orbital87x.svg ---
+--- needs --- orbital.idv[107] ==> orbital88x.svg ---
+Css: img[src="orbital89x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[109] ==> orbital89x.svg ---
+--- needs --- orbital.idv[110] ==> orbital90x.svg ---
+Css: img[src="orbital91x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[111] ==> orbital91x.svg ---
+Css: img[src="orbital92x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[112] ==> orbital92x.svg ---
+Css: img[src="orbital93x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[113] ==> orbital93x.svg ---
+Css: img[src="orbital94x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[114] ==> orbital94x.svg ---
+Css: img[src="orbital95x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[115] ==> orbital95x.svg ---
+Css: img[src="orbital96x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[116] ==> orbital96x.svg ---
+Css: img[src="orbital97x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[117] ==> orbital97x.svg ---
+Css: img[src="orbital98x.svg"]{vertical-align:-25%}
+--- needs --- orbital.idv[118] ==> orbital98x.svg ---
+Css: img[src="orbital99x.svg"]{vertical-align:-0%}
+--- needs --- orbital.idv[119] ==> orbital99x.svg ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("cmbx","10","10","100")
+Font("cmmib","10","10","100")
+Font("rsfs","10","10","100")
+Font("cmss","10","10","100")
+Font("cmss","8","8","87")
+Font("eufm","10","10","100")
+Font("ecti","1000","10","100")
+Font("ecbx","1000","10","100")

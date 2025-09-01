@@ -1,0 +1,434 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{tgtermes}
+%\usepackage[italic]{mathastext}
+
+%\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\ran}{ran}
+
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+\DeclareMathOperator{\GL}{\mathsf{GL}}
+\DeclareMathOperator{\gl}{\mathfrak{gl}}
+\DeclareMathOperator{\SO}{\mathsf{SO}}
+\DeclareMathOperator{\SU}{\mathsf{SU}}
+\DeclareMathOperator{\so}{\mathfrak{so}}
+\DeclareMathOperator{\su}{\mathfrak{su}}
+
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{
+%\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+%\theoremstyle{definition}
+%\newtheorem{defn}{Definition}
+%\newtheorem*{sol}{Solution}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{cor}{Corollary}
+%\newtheorem{exa}{Example}
+%\newtheorem{exeinner}{Exercise}
+%\newenvironment{exe}[1]{%
+%    \IfBlankTF{#1}
+%    {\renewcommand{theexeinner}{\unskip}}
+%    {\renewcommand\theexeinner{#1}}%
+%    \exeinner
+%}{\endexeinner}
+
+\title{Orbital angular momentum, Lie groups and Lie
+algebras}
+\author{Ernesto Camacho}
+\begin{document}
+    \maketitle
+
+    I've been trying to understand angular momentum in
+    quantum systems and thought it would be a good idea to
+    write some notes here. My goal is to give a basic
+    introduction to the theory in sufficient rigor without
+    ignoring some of the physical consequences of the
+    mathematics. This will be spread out in multiple posts.
+    In this brief post, I'll give the basic setup of the
+    theory of orbital angular momentum, and how the
+    resulting operators directly relate to both $\SO(3)$ and
+    $\so(3)$.  Doing so, we'll end up where the physics
+    literature usually starts.
+
+    Before doing so, here is a small rant. Symmetries play a
+    fundamental role in physics for reasons that, although
+    very natural, are still quite mysterious to me. In
+    particular, certain Lie groups play a central role in
+    both classical and quantum mechanics. In classical
+    mechanics, the angular momentum components can be
+    thought of as the Hamiltonian generators of rotations.
+    This interpretation carries over quite nicely to quantum
+    systems via Stone's theorem. In the case of a particle
+    moving in $\R^3$ (ignoring spin), the rotation group
+    $\SO(3)$ can be represented by a strongly-continuous
+    unitary representation, and its infinitesimal
+    generators, the well known orbital angular momentum
+    operators, can be obtained from a representation of its
+    Lie algebra $\so(3)$. A natural question that has been
+    bugging me for a while arises here:
+    \begin{quote}
+        From a physical point of view, which is more
+        fundamental: the Lie group representing the physical
+        symmetries, or its Lie algebra?
+    \end{quote}
+    After all, aren't the angular momentum operators
+    \textit{the observables} of the system? Isn't also true
+    that the physics literature usually starts
+    with the angular momentum operators and their
+    commutation relations, extracting as much information as
+    possible to solve problems of interest, like those
+    dealing with rotational invariance? In such cases the
+    operators representing $\so(3)$ also carry physical
+    meaning as \textit{constants of motion}.  Moreover, to
+    describe \textit{all} spin systems, don't we need to
+    identify the irreducible representations of $\so(3)$ or
+    equivalently, those of the Lie group $\SU(2)$? I believe
+    these are valid arguments (and there are other more
+    intriguing, see this
+    \href{https://physics.stackexchange.com/questions/492965/why-lie-algebras-if-what-we-care-about-in-physics-are-groups}{physics.stackexchange}
+    post), and I can't disagree entirely yet. However, I
+    believe we should not lose sight of the fact that it is
+    the \textbf{group structure} that fundamentally encodes
+    the physical symmetry, not its linearization.  In the
+    case at hand, $\SO(3)$ is the group of spatial
+    rotations, not its Lie algebra and not $\SU(2)$.
+    Regarding spin, the confusion seems to stem from a
+    failure of acknowledging the fundamentally
+    \textit{projective} nature of the quantum state space.
+    The theorems of Wigner and Kadison tell us that the
+    representations of the symmetry groups are at best
+    projective. For example, all spin representations arise
+    from $\SO(3)$ but only when we distinguish between
+    unitary and projective unitary representations.  The
+    half-integer spin representations appear as the latter.
+    The introduction of $\SU(2)$ to fully described quantum
+    angular momentum is done mainly for technical reasons,
+    as the projective representations of $\SO(3)$ can be
+    lifted to true unitary representations at the level of
+    its universal covering group, and unitary
+    representations are usually easier to handle.
+    Furthermore, from a mathematical point view, we must not
+    forget that in general a Lie group will contain global
+    information that is lost when passing to its Lie
+    algebra. This surely has physical implications.
+
+    Enough of that, let's begin. The system we will consider
+    is that of a particle moving in $\R^3$, ignoring spin
+    for now. The pure quantum states can be represented by
+    elements of the Hilbert space $\mathcal{H} =
+    L^2(\R^3,dx)$. The group of spatial rotations in $\R^3$
+    is $\SO(3)$, the compact and connected Lie group of
+    orthogonal $3 \times 3$ matrices with unit determinant.
+    On $\mathcal{H}$, the group carries a natural
+    representation $\Pi : \SO(3) \to
+    \mathcal{B}(\mathcal{H})$ defined as
+    \begin{equation}
+        \label{eqn:SO(3)-scur}
+        (\Pi(g) \psi)(x)
+        :=
+        \psi(g^{-1} x),
+        \quad
+        \psi \in \mathcal{H},
+    \end{equation}
+    for all $g \in \SO(3)$. The representation $\Pi$ is
+    unitary and strongly-continuous.  We wish to associate
+    $\Pi$ with representations of the Lie algebra $\so(3)$,
+    in terms of skew-self-adjoint operators on
+    $\mathcal{H}$.  As a reminder, the Lie algebra
+    $\mathfrak{g}$ of a Lie group $G$ is defined to be the
+    tangent space at the identity element $e \in G$. In the
+    case of the rotation group, its Lie algebra consists of
+    the traceless skew-symmetric $3 \times 3$ real matrices.
+    Any element $A \in \so(3)$ defines the one-parameter
+    subgroup $\R \ni t \mapsto \exp(t A) \in \SO(3)$. Using
+    $\Pi$, we can define a strongly-continuous unitary
+    one-paramter group 
+    \begin{equation}
+        \label{eqn:scuopg}
+        \R \ni t
+        \mapsto
+        \Pi(\exp(t A))
+        \in \mathcal{B}(\mathcal{H}), \quad \forall A \in
+        \so(3).
+    \end{equation}
+    By Stone's theorem there exists a unique self-adjoint
+    operator $\hat{A} : D(\hat{A}) \to \mathcal{H}$ that
+    satisfies
+    \begin{equation}
+        \Pi(\exp(tA))
+        = \exp\left(-it \hat{A}\right),
+        \quad
+        \forall t \in \R.
+    \end{equation}
+    We call $\hat{A}$ the self-adjoint \textit{generator}
+    (of the strongly-continuous unitary one parameter group)
+    associated to $A$. Its domain is given by
+    \begin{equation}
+        D(\hat{A})
+        =
+        \left\{
+            \psi \in \mathcal{H}
+            \, : \,
+            \lim_{t \to 0} \frac{1}{t}(\Pi(\exp(tA)) -
+            I)\psi
+            \;
+            \text{exists}
+        \right\},
+    \end{equation}
+    and its image on $\mathcal{H}$ can be computed as
+    \begin{equation}
+        \hat{A}\psi
+        =
+        i \frac{d}{dt}\bigg|_{t=0} 
+        \Pi(\exp(tA)) \psi
+        = 
+        \lim_{t \to 0} \frac{i}{t}(\Pi(\exp(tA)) - I)\psi,
+        \quad
+        \forall \psi \in D(\hat{A}).
+    \end{equation}
+    Actually computing the Stone domain is usually
+    non-trivial, moreover, nothing guarantees that the Stone
+    domains of any two generators will coincide. So if we
+    have any hope of defining a representation of the Lie
+    algebra, we will need to find a suitable common
+    invariant dense domain for all generators. For the case
+    at hand, the Schwartz space of rapidly decreasing test
+    functions $\mathscr{S}(\R^3)$ works just fine. But,
+    there is an alternative domain that actually holds for
+    arbitrary strongly-continuous unitary representations
+    $\Pi$ of a (finite dimensional) real Lie group $G$, the
+    so-called
+    \href{https://en.wikipedia.org/wiki/G%C3%A5rding_domain}{Gårding
+    domain}.
+    %To define this subspace, let $f \in C^{\infty}_0(G)$ be
+    %a smooth real-valued function on $G$ with compact
+    %support and $x \in \mathcal{H}$. Define the vector $x[f]
+    %:= \int_G f(g) U_g x \, dg$, where $dg$ is the
+    %left-invariant Haar measure on $G$ and the integral is
+    %defined in the weak sense, i.e., $x[f]$ is the unique
+    %vector such that
+    %\begin{equation}
+    %    \langle y, x[f] \rangle
+    %    =
+    %    \int_G f(g) \langle u, U_g x \rangle \, dg
+    %    \quad
+    %    \forall y \in \mathcal{H}.
+    %\end{equation}
+    %The Gårding space $D_G^{(U)}$ of $U$ and $G$ is the
+    %finite span of the $x[f] \in \mathcal{H}$ with $f \in
+    %C_c^{\infty}(G)$ and $x \in \mathcal{H}$.
+    This domain, denoted by $D_G^{(\Pi)}$ can be defined as
+    the subspace of all $\psi \in \mathcal{H}$ such that the
+    map $g \mapsto \Pi(g) \psi$ is an element of
+    $C^{\infty}(G)$. There are many properties of the
+    Gårding space that make it very useful for dealing with
+    representations of Lie groups and algebras, e.g., there
+    is a natural correspondance between the action of the
+    unitary representation, and the usual left action of the
+    group on its space of functions. For our
+    purposes only the following few properties are important
+    (for more, please see Valter Moretti's
+    \textit{\href{https://link.springer.com/book/10.1007/978-3-030-18346-2}{Fundamental
+    Mathematical Structures of Quantum Mechanics}}, from
+    which this post takes plenty).
+    First, $D_G^{(\Pi)}$ is dense in $\mathcal{H}$.
+    Second, it is invariant under the representation,
+    i.e., $\Pi(g) D_G^{(\Pi)} \subset D_G^{(\Pi)}$ for
+    all $g \in G$.  Third, the map $\pi : \mathfrak{g}
+    \to \mathcal{L}(\mathcal{H})$ defined as
+    \begin{equation}
+        \pi(A)
+        =
+        -i \hat{A} \big|_{D_G^{(\Pi)}},
+    \end{equation}
+    takes the element $A \in \mathfrak{g}$ to a
+    skew-symmetric operator defined by restricting the Stone
+    generator associated to $A$ to the Gårding domain. With
+    some work, it can be shown that $\pi$ is an $\R$-linear
+    representation of the Lie algebra $\mathfrak{g}$, i.e.,
+    $\pi(A)D_{G}^{(\Pi)} \subset D_{G}^{(\Pi)}$ and
+    \begin{equation}
+        [\pi(A), \pi(A')]
+        =
+        \pi([A,A]),
+        \quad
+        \forall A,A' \in \mathfrak{g}.
+    \end{equation}
+    The final important property is that the closure of the
+    representation is equal to the Stone generator, i.e.,
+    \begin{equation}
+        \hat{A}
+        =
+        \overline{i\pi(A)},
+        \quad
+        \forall A \in \mathfrak{g}.
+    \end{equation}
+    Setting $G = \SO(3)$ and $\mathfrak{g}
+    = \so(3)$, we now see that from a unitary
+    representation of the rotation group, we've obtained a
+    representation of the associated Lie algebra, by
+    restricting the generators of the unitary representation
+    and multiplying by a factor in order to preserve the
+    bracket. Let us now work out what $\pi : \so(3) \to
+    \mathcal{L}(\mathcal{H})$ looks like explicitly. A basis
+    for $\so(3)$ is given by the traceless and
+    skew-symmetric matrices
+    \begin{equation}
+        \label{eqn:so(3)-basis}
+        F_1
+        =
+        \begin{pmatrix} 
+            0 & 0 & 0 \\
+            0 & 0 & -1 \\
+            0 & 1 & 0 
+        \end{pmatrix},
+        \quad
+        F_2
+        =
+        \begin{pmatrix} 
+            0 & 0 & 1 \\
+            0 & 0 & 0 \\
+            -1 & 0 & 0
+        \end{pmatrix}
+        \quad\text{and}\quad
+        F_3
+        =
+        \begin{pmatrix} 
+            0 & -1 & 0 \\
+            1 & 0 & 0 \\
+            0 & 0 & 0
+        \end{pmatrix}.
+    \end{equation}
+    These satisfy the well known commutation relations 
+    \begin{equation}
+        \label{eqn:so(3)-comm}
+        [F_i, F_j]
+        =
+        \sum_{k}^{} \varepsilon_{ijk} F_k.
+    \end{equation}
+    Take $F_3$ as an example. The $\SO(3)$ subgroup
+    generated by $F_3$ can be expressed as
+    \begin{align}
+        \exp(t F_3)
+        =
+        I + \sin(t) F_3 + (1-\cos(t)) F_3^2
+        = 
+        \begin{pmatrix} 
+            \cos t & -\sin t & 0 \\
+            \sin t & \cos t & 0 \\
+            0 & 0 & 1
+        \end{pmatrix}, 
+    \end{align}
+    which is of course nothing more than the matrix
+    corresponding to a rotation of angle $t$ about the
+    $x_3$-axis of some coordinate frame. Using $\Pi$, the
+    generator  corresponding to $F_3$ (which we now denote
+    by $L_3 := \hat{F_3}$) has the following effect on any
+    $\psi \in D(L_3)$:
+    \begin{align}
+        (L_3\psi)(\bm x)
+        &= i \frac{d}{dt}\bigg|_{t=0}\Pi(\exp(t
+        F_3))\psi(\bm x) \\
+        &= i \frac{d}{dt}\bigg|_{t=0} \psi(\exp(-t F_3) \bm
+        x) \\
+        &= i \frac{d}{dt}\bigg|_{t=0} \psi(\cos(t) x_1 +
+        \sin(t) x_2, -\sin(t) x_1 + \cos(t) x_2, x_3) \\
+        &= i \left(
+            \partial_1 \psi(\bm x) x_2 - \partial_2
+            \psi(\bm x) x_1
+        \right) \\
+        &= (X_1 P_2 - X_2 P_1)\psi(\bm x) 
+        \quad
+        \forall \psi \in D(L_3),
+    \end{align}
+    where $X_i$ and $P_j$ are the self-adjoint position and
+    momentum operators restricted to the Stone domain of
+    $L_3$.  The self-adjoint operator $L_3$ is the
+    \textit{orbital angular momentum} operator for the
+    $x_3$-axis. This result matches what we obtain by the
+    usual quantization of the classical angular momentum
+    vector $\vec L = \vec x \wedge \vec p$. Repeating the
+    procedure for the other two orthogonal axis we obtain
+    \begin{equation}
+        L_k
+        =
+        \sum_{i,j}^{} \varepsilon_{kij} X_i P_j.
+    \end{equation}
+    It seems so little has been gained by taking the domain
+    issues of unbounded operators seriously, but what do I
+    know. On the Gårding domain $D_{\SO(3)}^{(\Pi)}$, a quick
+    calculation reveals that the $L_k$ satisfy the
+    commutation relations
+    \begin{equation}
+        [L_i, L_j]
+        = i \sum_{k}^{} \varepsilon_{ijk} L_k.
+    \end{equation}
+    It immediately follows that the $\pi(F_k)$ satisfy
+    \begin{align}
+        [\pi(F_i), \pi(F_j)]
+        = [-i L_i, -i L_j]
+        = -i \sum_{k}^{} \varepsilon_{ijk} L_k
+        = \sum_{k}^{} \varepsilon_{ijk} \pi(F_k).
+    \end{align}
+    Thus $\pi$ preserves the Lie bracket of
+    $\so(3)$, as it should. So restricting to the
+    Gårding domain, the real span of the $\pi(F_k)$
+    constitute a Lie algebra representation of $\so(3)$ in
+    terms of skew-symmetric operators on $\mathcal{H}$. Just
+    as we desired!
+
+    So we've briefly shown how the orbital angular
+    momentum operators of quantum mechanics are the
+    infinitesimal generators of a strongly-continuous
+    unitary representation of the rotation group, and at the
+    same time, how they \textit{induce} a representation of
+    the associated Lie algebra. Usually the next task
+    consists of identifying the finite unitary irreducible
+    representations of $\SO(3)$. This is conveniently done
+    by identifying the finite unitary irreducible
+    representations of $\so(3)$ or equivalently those of
+    $\SU(2)$.  Doing so, we will encounter the fact that
+    only some of these representations can actually be
+    ``found inside'' the infinite-dimensional representation
+    of the rotation group. In the physics jargon, one says
+    that only the integer representations appear as
+    subrepresentations of the orbital angular momentum.  Of
+    course, what is actually meant is that \textit{truely
+    unitary} representations only exist for integer spin.
+    In the next post I hope to show how we can realize these
+    integer spin representations in $\mathcal{H}$ and how
+    they're used for solving the Schrödinger equation for
+    rotationally invariant Hamiltonians. 
+    
+    
+
+
+\end{document}

@@ -1,0 +1,278 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Orbital angular momentum, Lie groups and Lie algebras</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='orbital.css' rel='stylesheet' type='text/css' /> 
+<link rel="stylesheet" href="../../../style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../../latex-style.css" media="screen" title="no title" charset="utf-8">
+<meta content='orbital.tex' name='src' /> 
+</head><body>
+
+<div class="blob"></div>
+<div class="wrapper">
+   <div class="container">
+       <h2>In Dirac's Sea</h2>
+       <nav class="post-fix"><a href="../../../index.html">Home</a> / <a href="../../index.html">Blog</a></nav>
+       <section class="post">
+
+         <div class='maketitle'>
+            <h2 class='titleHead'>Orbital angular momentum, Lie groups and Lie algebras</h2>
+            <div class='author'><span class='ecrm-1200'>Ernesto Camacho</span></div><br />
+            <div class='date'><span class='ecrm-1200'>August 31, 2025</span></div>
+         </div>
+
+<!-- l. 69 --><p class='indent'>   I’ve been trying to understand angular momentum in quantum systems and thought it
+would be a good idea to write some notes here. My goal is to give a basic introduction to the
+theory in sufficient rigor without ignoring some of the physical consequences of the
+mathematics. This will be spread out in multiple posts. In this brief post, I’ll give the basic
+setup for the theory of orbital angular momentum, and how the resulting operators directly
+relate to both <img alt='SO(3)  ' class='math' src='orbital0x.svg' /> and <img alt='𝔰𝔬(3)  ' class='math' src='orbital1x.svg' />. We’ll end up where the physics literature usually
+starts.
+</p><!-- l. 81 --><p class='indent'>   Before doing so, here is a small rant. Symmetries play a fundamental role in physics for
+reasons that, although very natural, are still quite mysterious to me. In particular, certain Lie
+groups play a central role in both classical and quantum mechanics. In classical mechanics, the
+angular momentum components can be thought of as the Hamiltonian generators of rotations.
+This interpretation carries over quite nicely to quantum systems via Stone’s theorem. In the
+case of a particle moving in <img alt='  3
+R  ' class='math' src='orbital2x.svg' /> (ignoring spin), the rotation group <img alt='SO (3)  ' class='math' src='orbital3x.svg' /> can be
+represented by a strongly-continuous unitary representation, and its infinitesimal generators,
+the well known orbital angular momentum operators, can be obtained from a representation of
+its Lie algebra <img alt='𝔰𝔬(3)  ' class='math' src='orbital4x.svg' />. A natural question that has been bugging me for a while arises
+here:
+     </p><blockquote class='quote'>
+     <!-- l. 98 --><p class='noindent'>From a physical point of view, which is more fundamental: the Lie group
+     representing the physical symmetries, or its Lie algebra?</p></blockquote>
+<!-- l. 102 --><p class='noindent'>After all, aren’t the angular momentum operators <span class='ecti-1000'>the observables </span>of the system? Isn’t also true
+that the physics literature usually starts with these operators
+and their commutation relations, extracting as much information as possible to
+solve problems of interest, like those dealing with rotational invariance? In such
+cases the operators representing <img alt='𝔰𝔬(3)  ' class='math' src='orbital5x.svg' /> also carry physical meaning as <span class='ecti-1000'>constants
+of motion</span>. Moreover, to describe <span class='ecti-1000'>all </span>spin systems, don’t we need to identify the
+irreducible representations of <img alt='𝔰𝔬(3)  ' class='math' src='orbital6x.svg' /> or equivalently, those of the Lie group <img alt='SU (2)  ' class='math' src='orbital7x.svg' />? I
+believe these are valid arguments (and there are other, more intriguing ones, see this
+<a href='https://physics.stackexchange.com/questions/492965/why-lie-algebras-if-what-we-care-about-in-physics-are-groups'>physics.stackexchange</a> post), so I can’t disagree entirely yet. However, I believe we should
+not lose sight of the fact that it is the <span class='ecbx-1000'>group structure </span>that fundamentally encodes the
+physical symmetry, not its linearization. In the case at hand, <img alt='SO (3)  ' class='math' src='orbital8x.svg' /> is the group of
+spatial rotations, not its Lie algebra and not <img alt='SU (2)  ' class='math' src='orbital9x.svg' />. Regarding spin, the confusion
+seems to stem from a failure of acknowledging the fundamentally <span class='ecti-1000'>projective </span>nature of
+the quantum state space. The theorems of Wigner and Kadison tell us that the
+                                                                         
+
+                                                                         
+representations of the symmetry groups are at best projective. For example, all spin
+representations arise from <img alt='SO(3)  ' class='math' src='orbital10x.svg' /> but only when we distinguish between unitary and
+projective unitary representations. The half-integer spin representations appear as the
+latter. The introduction of <img alt='SU (2)  ' class='math' src='orbital11x.svg' /> to fully described quantum angular momentum
+is done mainly for technical reasons, as the projective representations of <img alt='SO(3)  ' class='math' src='orbital12x.svg' />
+can be lifted to true unitary representations at the level of its universal covering
+group, and unitary representations are usually easier to handle. Furthermore, from a
+mathematical point view, we must not forget that in general a Lie group will contain global
+information that is lost when passing to its Lie algebra. This surely has physical
+implications.
+</p><!-- l. 143 --><p class='indent'>   Enough of that, let’s begin. The system we will consider is that of a particle moving in
+<img alt=' 3
+R ' class='math' src='orbital13x.svg' />, ignoring spin for now. The pure quantum states can be represented by elements
+of the Hilbert space <img alt='        3
+ℋ = L2(R ,dx)  ' class='math' src='orbital14x.svg' />. The group of spatial rotations in <img alt=' 3
+R  ' class='math' src='orbital15x.svg' /> is
+<img alt='SO(3)  ' class='math' src='orbital16x.svg' />, the compact and connected Lie group of orthogonal <img alt='3× 3  ' class='math' src='orbital17x.svg' /> matrices with unit
+determinant. On <img alt='ℋ ' class='math' src='orbital18x.svg' />, the group carries a natural representation <img alt='Π : SO(3) → ℬ(ℋ )  ' class='math' src='orbital19x.svg' /> defined
+as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='(Π(g)ψ)(x) := ψ (g− 1x), ψ ∈ ℋ,
+' class='math-display' src='orbital20x.svg' /><a id='x1-2r1'></a></div>
+   </td><td class='equation-label'>(1)</td></tr></table>
+<!-- l. 160 --><p class='nopar'>for all <img alt='g ∈ SO (3)  ' class='math' src='orbital21x.svg' />. The representation <img alt='Π  ' class='math' src='orbital22x.svg' /> is unitary and strongly-continuous. We wish to
+associate <img alt='Π  ' class='math' src='orbital23x.svg' /> with representations of the Lie algebra <img alt='𝔰𝔬(3)  ' class='math' src='orbital24x.svg' />, in terms of skew-self-adjoint
+operators on <img alt='ℋ ' class='math' src='orbital25x.svg' />. As a reminder, the Lie algebra <img alt='𝔤  ' class='math' src='orbital26x.svg' /> of a Lie group <img alt='G  ' class='math' src='orbital27x.svg' /> is defined to be the
+tangent space at the identity element <img alt='e ∈ G  ' class='math' src='orbital28x.svg' />. In the case of the rotation group, its Lie algebra
+consists of the traceless skew-symmetric <img alt='3× 3  ' class='math' src='orbital29x.svg' /> real matrices. Any element <img alt='A ∈ 𝔰𝔬(3)  ' class='math' src='orbital30x.svg' /> defines
+the one-parameter subgroup <img alt='R ∋ t ↦→ exp(tA) ∈ SO (3)  ' class='math' src='orbital31x.svg' />. Using <img alt='Π  ' class='math' src='orbital32x.svg' />, we can define a
+strongly-continuous unitary one-paramter group
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='R ∋ t ↦→ Π(exp(tA )) ∈ ℬ (ℋ ), ∀A ∈ 𝔰𝔬(3).
+' class='math-display' src='orbital33x.svg' /><a id='x1-3r2'></a></div>
+   </td><td class='equation-label'>(2)</td></tr></table>
+                                                                         
+
+                                                                         
+<!-- l. 181 --><p class='nopar'>By Stone’s theorem there exists a unique self-adjoint operator <img alt='ˆA : D(Aˆ) → ℋ ' class='math' src='orbital34x.svg' /> that
+satisfies
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='                (    )
+Π (exp(tA)) = exp − it ˆA , ∀t ∈ R .
+' class='math-display' src='orbital35x.svg' /><a id='x1-4r3'></a></div>
+   </td><td class='equation-label'>(3)</td></tr></table>
+<!-- l. 190 --><p class='nopar'>We call <img alt='Aˆ  ' class='math' src='orbital36x.svg' /> the self-adjoint <span class='ecti-1000'>generator </span>(of the strongly-continuous unitary one parameter
+group) associated to <img alt='A  ' class='math' src='orbital37x.svg' />. Its domain is given by
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='       {                                  }
+D ( ˆA) = ψ ∈ ℋ : lim 1(Π(exp(tA ))− I)ψ exists ,
+                t→0 t
+' class='math-display' src='orbital38x.svg' /><a id='x1-5r4'></a></div>
+   </td><td class='equation-label'>(4)</td></tr></table>
+<!-- l. 205 --><p class='nopar'>and its image on <img alt='ℋ ' class='math' src='orbital39x.svg' /> can be computed as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='ˆ     d-                   -i                         ˆ
+Aψ = idt|t=0Π(exp(tA ))ψ = ltim→0t(Π (exp(tA))− I)ψ,  ∀ψ ∈ D (A).
+' class='math-display' src='orbital40x.svg' /><a id='x1-6r5'></a></div>
+   </td><td class='equation-label'>(5)</td></tr></table>
+<!-- l. 216 --><p class='nopar'>Actually computing the Stone domain is usually non-trivial, moreover, nothing guarantees
+that the Stone domains of any two generators will coincide. So if we have any hope of defining
+a representation of the Lie algebra, we will need to find a suitable common invariant dense
+domain for all generators. For the case at hand, the Schwartz space of rapidly decreasing
+                                                                         
+
+                                                                         
+test functions <img alt='     3
+𝒮 (R  )  ' class='math' src='orbital41x.svg' /> works just fine. But, there is an alternative domain that
+actually holds for arbitrary strongly-continuous unitary representations <img alt='Π  ' class='math' src='orbital42x.svg' /> of a
+(finite dimensional) real Lie group <img alt='G  ' class='math' src='orbital43x.svg' />, the so-called  <a href='https://en.wikipedia.org/wiki/G%C3%A5rding_domain'>Gårding domain</a>. This domain,
+denoted by <img alt='D (ΠG)  ' class='math' src='orbital44x.svg' /> can be defined as the subspace of all <img alt='ψ ∈ ℋ ' class='math' src='orbital45x.svg' /> such that the map
+<img alt='g ↦→ Π (g)ψ  ' class='math' src='orbital46x.svg' /> is an element of <img alt='C ∞(G )  ' class='math' src='orbital47x.svg' />. There are many properties of the Gårding
+space that make it very useful for dealing with representations of Lie groups and
+algebras, e.g., there is a natural correspondance between the action of the unitary
+representation, and the usual left action of the group on its space of functions. For our
+purposes only the following few properties are important (for more, please see Valter
+Moretti’s  <a href='https://link.springer.com/book/10.1007/978-3-030-18346-2'><span class='ecti-1000'>Fundamental Mathematical Structures of Quantum Mechanics</span></a>, from which this
+post takes plenty). First, <img alt='D(GΠ)  ' class='math' src='orbital48x.svg' /> is dense in <img alt='ℋ ' class='math' src='orbital49x.svg' />. Second, it is invariant under the
+representation, i.e., <img alt='Π(g)D(Π)⊂ D (Π )
+     G      G  ' class='math' src='orbital50x.svg' /> for all <img alt='g ∈ G  ' class='math' src='orbital51x.svg' />. Third, the map <img alt='π : 𝔤 → ℒ(ℋ )  ' class='math' src='orbital52x.svg' /> defined
+as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='π(A) = − iA ˆ| (Π),
+          D G
+' class='math-display' src='orbital53x.svg' /><a id='x1-7r6'></a></div>
+   </td><td class='equation-label'>(6)</td></tr></table>
+<!-- l. 271 --><p class='nopar'>takes the element <img alt='A ∈ 𝔤  ' class='math' src='orbital54x.svg' /> to a skew-symmetric operator defined by restricting the Stone
+generator associated to <img alt='A  ' class='math' src='orbital55x.svg' /> to the Gårding domain. With some work, it can be shown that
+<img alt='π  ' class='math' src='orbital56x.svg' /> is an <img alt='R  ' class='math' src='orbital57x.svg' />-linear representation of the Lie algebra <img alt='𝔤  ' class='math' src='orbital58x.svg' />, i.e., <img alt='      (Π)    (Π)
+π(A )D G  ⊂ DG  ' class='math' src='orbital59x.svg' />
+and
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='         ′                  ′
+[π (A ),π(A )] = π([A, A]), ∀A,A  ∈ 𝔤.
+' class='math-display' src='orbital60x.svg' /><a id='x1-8r7'></a></div>
+   </td><td class='equation-label'>(7)</td></tr></table>
+<!-- l. 284 --><p class='nopar'>The final important property is that the closure of the representation is equal to the Stone
+generator, i.e.,
+</p>
+   <table class='equation'><tr><td>
+                                                                         
+
+                                                                         
+   <div class='math-display'>
+<img alt='Aˆ= iπ(A),  ∀A ∈ 𝔤.
+' class='math-display' src='orbital61x.svg' /><a id='x1-9r8'></a></div>
+   </td><td class='equation-label'>(8)</td></tr></table>
+<!-- l. 293 --><p class='nopar'>Setting <img alt='G = SO(3)  ' class='math' src='orbital62x.svg' /> and <img alt='𝔤 = 𝔰𝔬(3)  ' class='math' src='orbital63x.svg' />, we now see that from a unitary representation of the
+rotation group, we’ve obtained a representation of the associated Lie algebra, by
+restricting the generators of the unitary representation and multiplying by a factor
+in order to preserve the bracket. Let us now work out what <img alt='π : 𝔰𝔬(3) → ℒ(ℋ )  ' class='math' src='orbital64x.svg' />
+looks like explicitly. A basis for <img alt='𝔰𝔬(3)  ' class='math' src='orbital65x.svg' /> is given by the traceless and skew-symmetric
+matrices
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='     (         )        (         )            (         )
+       0 0   0             0  0  1               0  − 1 0
+F1 = ( 0 0  − 1) , F2 = (  0  0  0)   and  F3 = ( 1  0  0) .
+       0 1   0            − 1 0  0               0   0  0
+' class='math-display' src='orbital66x.svg' /><a id='x1-10r9'></a></div>
+   </td><td class='equation-label'>(9)</td></tr></table>
+<!-- l. 329 --><p class='nopar'>These satisfy the well known commutation relations
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='         ∑
+[Fi,Fj] =   𝜀ijkFk.
+          k
+' class='math-display' src='orbital67x.svg' /><a id='x1-11r10'></a></div>
+   </td><td class='equation-label'>(10)</td></tr></table>
+<!-- l. 336 --><p class='nopar'>Take <img alt='F3  ' class='math' src='orbital68x.svg' /> as an example. The <img alt='SO (3)  ' class='math' src='orbital69x.svg' /> subgroup generated by <img alt='F3  ' class='math' src='orbital70x.svg' /> can be expressed
+as
+</p>
+                                                                         
+
+                                                                         
+   <div class='align'><img alt='pict' src='orbital71x.svg' /><a id='x1-12r11'></a></div>
+<!-- l. 350 --><p class='indent'>   which is of course nothing more than the matrix corresponding to a rotation of
+angle <img alt='t  ' class='math' src='orbital72x.svg' /> about the <img alt='x3  ' class='math' src='orbital73x.svg' />-axis of some coordinate frame. Using <img alt='Π  ' class='math' src='orbital74x.svg' />, the generator
+corresponding to <img alt='F3  ' class='math' src='orbital75x.svg' /> (which we now denote by <img alt='      ˆ
+L3 := F3  ' class='math' src='orbital76x.svg' />) has the following effect on any
+<img alt='ψ ∈ D (L3)  ' class='math' src='orbital77x.svg' />:
+</p>
+   <div class='align'><img alt='pict' src='orbital78x.svg' /><a id='x1-13r12'></a><a id='x1-14r13'></a><a id='x1-15r14'></a><a id='x1-16r15'></a><a id='x1-17r16'></a></div>
+<!-- l. 372 --><p class='indent'>   where <img alt='Xi  ' class='math' src='orbital79x.svg' /> and <img alt='Pj  ' class='math' src='orbital80x.svg' /> are the self-adjoint position and momentum operators restricted to
+the Stone domain of <img alt='L3  ' class='math' src='orbital81x.svg' />. The self-adjoint operator <img alt='L3  ' class='math' src='orbital82x.svg' /> is the <span class='ecti-1000'>orbital angular momentum</span>
+operator for the <img alt='x3  ' class='math' src='orbital83x.svg' />-axis. This result matches what we obtain by the usual quantization of
+the classical angular momentum vector <img alt='⃗L = ⃗x ∧⃗p  ' class='math' src='orbital84x.svg' />. Repeating the procedure for the other two
+orthogonal axis we obtain
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='     ∑
+Lk =    𝜀kijXiPj.
+     i,j
+' class='math-display' src='orbital85x.svg' /><a id='x1-18r17'></a></div>
+   </td><td class='equation-label'>(17)</td></tr></table>
+<!-- l. 384 --><p class='nopar'>It seems so little has been gained by taking the domain issues of unbounded operators
+seriously, but what do I know. On the Gårding domain <img alt=' (Π)
+DSO(3)  ' class='math' src='orbital86x.svg' />, a quick calculation reveals
+that the <img alt='Lk  ' class='math' src='orbital87x.svg' /> satisfy the commutation relations
+</p>
+   <table class='equation'><tr><td>
+                                                                         
+
+                                                                         
+   <div class='math-display'>
+<img alt='         ∑
+[Li,Lj] = i  𝜀ijkLk.
+          k
+' class='math-display' src='orbital88x.svg' /><a id='x1-19r18'></a></div>
+   </td><td class='equation-label'>(18)</td></tr></table>
+<!-- l. 393 --><p class='nopar'>It immediately follows that the <img alt='π(Fk)  ' class='math' src='orbital89x.svg' /> satisfy
+</p>
+   <div class='align'><img alt='pict' src='orbital90x.svg' /><a id='x1-20r19'></a></div>
+<!-- l. 401 --><p class='indent'>   Thus <img alt='π  ' class='math' src='orbital91x.svg' /> preserves the Lie bracket of <img alt='𝔰𝔬(3)  ' class='math' src='orbital92x.svg' />, as it should. So restricting to the Gårding
+domain, the real span of the <img alt='π(Fk)  ' class='math' src='orbital93x.svg' /> constitute a Lie algebra representation of <img alt='𝔰𝔬(3)  ' class='math' src='orbital94x.svg' /> in terms
+of skew-symmetric operators on <img alt='ℋ ' class='math' src='orbital95x.svg' />. Just as we desired!
+</p><!-- l. 408 --><p class='indent'>   So we’ve briefly shown how the orbital angular momentum operators of quantum
+mechanics are the infinitesimal generators of a strongly-continuous unitary representation of
+the rotation group, and at the same time, how they <span class='ecti-1000'>induce </span>a representation of the
+associated Lie algebra. Usually the next task consists of identifying the finite unitary
+irreducible representations of <img alt='SO (3)  ' class='math' src='orbital96x.svg' />. This is conveniently done by identifying the
+finite unitary irreducible representations of <img alt='𝔰𝔬(3)  ' class='math' src='orbital97x.svg' /> or equivalently those of <img alt='SU(2)  ' class='math' src='orbital98x.svg' />.
+Doing so, we will encounter the fact that only some of these representations can
+actually be “found inside” the infinite-dimensional representation of the rotation
+group. In the physics jargon, one says that only the integer representations appear as
+subrepresentations of the orbital angular momentum. Of course, what is actually meant
+is that <span class='ecti-1000'>truely unitary </span>representations only exist for integer spin. In the next post
+I hope to show how we can realize these integer spin representations in <img alt='ℋ ' class='math' src='orbital99x.svg' /> and
+how they’re used for solving the Schrödinger equation for rotationally invariant
+Hamiltonians.
+</p>
+
+</section>
+<div style="margin-top: 7em;">&nbsp;</div> 
+</div>
+</div>
+    
+</body> 
+</html>

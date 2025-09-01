@@ -35,8 +35,8 @@ pre {
 
 .container {
   width: auto;
-  max-width: 720px;
-  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 730px;
+  background-color: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(50px);
   margin: 1em;
   padding: 1em;
@@ -58,7 +58,7 @@ hr {
     top: 10%;
     left: 20%;
     border-radius: 50%;
-    filter: blur(10px);
+    filter: blur(20px);
     background: radial-gradient(circle, 
         rgba(0, 180, 255, 0.9) 20%, 
         rgba(0, 140, 255, 0.8) 40%, 

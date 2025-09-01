@@ -30,3 +30,8 @@ section.post p {
 .maketitle .date {
     text-align: left;
 }
+
+.equation {
+    margin-bottom: 1em;
+}
+
