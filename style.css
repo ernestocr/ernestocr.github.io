@@ -8,7 +8,7 @@ body {
 }
 
 ul {
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 a {
@@ -69,4 +69,18 @@ hr {
 
 .blog-list {
     margin-top: 2em;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: #ffffff;
+  }
+
+  .blob {
+    display: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
 }
