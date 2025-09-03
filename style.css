@@ -37,7 +37,7 @@ pre {
   width: auto;
   max-width: 730px;
   background-color: rgba(255, 255, 255, 0.90);
-  backdrop-filter: blur(50px);
+  /* backdrop-filter: blur(50px); */
   margin: 1em;
   padding: 1em;
   border-radius: 15px 15px;
@@ -56,13 +56,13 @@ hr {
     width: 750px;
     height: 750px;
     top: 10%;
-    left: 20%;
+    right: -375px;
     border-radius: 50%;
-    filter: blur(20px);
+    filter: blur(30px);
     background: radial-gradient(circle, 
         rgba(0, 180, 255, 0.9) 20%, 
         rgba(0, 140, 255, 0.8) 40%, 
-        rgba(255, 140, 0, 0.7) 70%, 
+        rgba(255, 140, 0, 0.7) 65%, 
         rgba(0, 0, 0, 1) 100%);
     z-index: -1;
 }
