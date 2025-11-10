@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>A brief note on operator spectra</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='spectral.css' rel='stylesheet' type='text/css' /> 
+<link rel="stylesheet" href="../../../style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../../latex-style.css" media="screen" title="no title" charset="utf-8">
+<meta content='spectral.tex' name='src' /> 
+</head><body>
+<div class="blob"></div>
+<div class="wrapper">
+    <div class="container">
+        <h2>In Dirac's Sea</h2>
+        <nav class="post-fix"><a href="../../../index.html">Home</a> / <a href="../../index.html">Blog</a></nav>
+        <section class="post">
+
+            <div class='maketitle'>
+                <h2 class='titleHead'>A brief note on operator spectra</h2>
+                <div class='author'><span class='ecrm-1200'>Ernesto</span></div><br />
+                <div class='date'><span class='ecrm-1200'>November 10, 2025</span></div>
+            </div>
+
+<!-- l. 65 --><p class='indent'>   I keep forgetting basic definitions pertaining to the spectral theory of self-adjoint operators
+so I want to keep a few of them here as a reminder. I’ll illustrate the concepts with examples
+arising in the theory of Anderson localization.
+</p><!-- l. 71 --><p class='indent'>   A confusion that can occur especially when studying the physics literature, is that of
+mixing up the various definitions and nomenclature related to the spectrum of an operator.
+For example, the language usually used could leave one confused when meeting an operator
+<img alt='A  ' class='math' src='spectral0x.svg' /> with its spectrum equal to some continuous subset of the real line, yet having only a “pure
+point spectrum”. Additionally, it is common to say an operator has pure point spectrum for
+both the case in which it is entirely pure point or when it only has non-trivial pure point part
+(like the Hamiltonian of the hydrogen atom), but not much can be done about this except to
+pay attention to the context we’re in. This post is just a brief recollection of these
+concepts.
+</p>
+   <h3 class='sectionHead' id='bare-minimum-spectral-theory'><span class='titlemark'>1   </span> <a id='x1-10001'></a>Bare minimum spectral theory</h3>
+<!-- l. 88 --><p class='noindent'>What follows can be found in detail in M. Aizenman and S. Warzel’s <span class='ecti-1000'>Random Operators</span>. A lot
+of the following definitions apply to some broader class of linear operators, but we will
+implicitly assume that we deal with self-adjoint operators. Let <img alt='A : 𝒟(A) → ℋ ' class='math' src='spectral1x.svg' /> be a densely
+defined self-adjoint operator on some Hilbert space <img alt='ℋ ' class='math' src='spectral2x.svg' />. The <span class='ecti-1000'>resolvent set </span>is defined
+as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='ρ(A ) := {z ∈ C : (A− zI) : 𝒟(A) → ℋ is bijective},
+' class='math-display' src='spectral3x.svg' /><a id='x1-1001r1'></a></div>
+   </td><td class='equation-label'>(1)</td></tr></table>
+<!-- l. 100 --><p class='nopar'>and the inverse <img alt='(A − zI)−1  ' class='math' src='spectral4x.svg' /> is called <span class='ecti-1000'>the resolvent</span>. The <span class='ecti-1000'>spectrum </span>of <img alt='A  ' class='math' src='spectral5x.svg' /> is <img alt='σ(A) := C ∖ρ(A )  ' class='math' src='spectral6x.svg' />,
+which is a closed subset of the real line. It can be shown that for any <img alt='ψ ∈ ℋ ' class='math' src='spectral7x.svg' /> the function
+defined by
+                                                                         
+
+                                                                         
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='Fψ(z) := ⟨ψ,(A− zI)−1ψ⟩
+' class='math-display' src='spectral8x.svg' /><a id='x1-1002r2'></a></div>
+   </td><td class='equation-label'>(2)</td></tr></table>
+<!-- l. 109 --><p class='nopar'>is a <span class='ecti-1000'>Herglotz-Pick </span>function, which means that it is a holomorphic function <img alt='Fψ : C+ → C+  ' class='math' src='spectral9x.svg' />
+from the upper-half plane into itself. There is a representation theorem for these types of
+functions which states that there exists a unique finite Borel measure <img alt='μ ψ  ' class='math' src='spectral10x.svg' /> on <img alt='R  ' class='math' src='spectral11x.svg' /> called the
+<span class='ecti-1000'>spectral measure of </span><img alt='A  ' class='math' src='spectral12x.svg' /> associated to <img alt='ψ  ' class='math' src='spectral13x.svg' />, which satisfies
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='        ∫
+Fψ (z) =    -1--μ ψ(dλ).
+         R λ− z
+' class='math-display' src='spectral14x.svg' /><a id='x1-1003r3'></a></div>
+   </td><td class='equation-label'>(3)</td></tr></table>
+<!-- l. 121 --><p class='nopar'>By polarization we obtain a complex finite Borel measure <img alt='μϕ,ψ  ' class='math' src='spectral15x.svg' />, which can be used to define
+a functional calculus for bounded functions <img alt='f ∈ L ∞(R )  ' class='math' src='spectral16x.svg' /> satisfying
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='           ∫
+⟨ϕ,f(A )ψ ⟩ =   f(λ)μ  (dλ),  ∀ϕ,ψ ∈ ℋ.
+            R      ϕ,ψ
+' class='math-display' src='spectral17x.svg' /><a id='x1-1004r4'></a></div>
+   </td><td class='equation-label'>(4)</td></tr></table>
+                                                                         
+
+                                                                         
+<!-- l. 131 --><p class='nopar'>Of course the characteristic functions <img alt='χB  ' class='math' src='spectral18x.svg' /> are bounded for any Borel set <img alt='B ∈ ℬ ' class='math' src='spectral19x.svg' /> and can be
+used to define orthogonal projections <img alt='PA(B)  ' class='math' src='spectral20x.svg' />. The map <img alt='PA : ℬ → ℒ(ℋ )  ' class='math' src='spectral21x.svg' /> defined in this
+manner is a <span class='ecti-1000'>projection-valued measure</span>. The spectral theorem guarantees a correspondence
+between these projection-valued measures and self-adjoint operators on <img alt='ℋ ' class='math' src='spectral22x.svg' />. In particular we
+have <img alt='μϕ,ψ(B ) = ⟨ϕ,PA(B)ψ⟩ ' class='math' src='spectral23x.svg' />.
+</p><!-- l. 143 --><p class='indent'>   Having such a Borel measure <img alt='μ  ' class='math' src='spectral24x.svg' />,  <a href=' https://en.wikipedia.org/wiki/Lebesgue%27s_decomposition_theorem '>Lebesgue’s decomposition theorem</a> states that <img alt='μ  ' class='math' src='spectral25x.svg' /> can
+be decomposed with respect to the Lebesgue measure into three mutually singular
+parts:
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='μ = μpp +μac +μsc,
+' class='math-display' src='spectral26x.svg' /><a id='x1-1005r5'></a></div>
+   </td><td class='equation-label'>(5)</td></tr></table>
+<!-- l. 151 --><p class='nopar'>known as the <span class='ecti-1000'>pure point </span>part, the <span class='ecti-1000'>absolutely continuous </span>part and the <span class='ecti-1000'>singular continuous</span>
+part, respectively. Occasionally one calls these parts, spectral components. Using these
+components, we can define the closed subspaces
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='      {              }
+ℋ#  =  ψ ∈ ℋ : μψ = μ#ψ ,
+' class='math-display' src='spectral27x.svg' /><a id='x1-1006r6'></a></div>
+   </td><td class='equation-label'>(6)</td></tr></table>
+<!-- l. 164 --><p class='nopar'>where <img alt='#  ' class='math' src='spectral28x.svg' /> is <img alt='pp,ac  ' class='math' src='spectral29x.svg' /> or <img alt='sc  ' class='math' src='spectral30x.svg' />. It turns out that the Hilbert space can be decomposed as a
+direct sum of these subspaces:
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='ℋ = ℋpp ⊕ℋac ⊕ ℋsc,
+' class='math-display' src='spectral31x.svg' /><a id='x1-1007r7'></a></div>
+   </td><td class='equation-label'>(7)</td></tr></table>
+<!-- l. 173 --><p class='nopar'>with each summand being invariant under <img alt='A  ' class='math' src='spectral32x.svg' />. If <img alt='A  ' class='math' src='spectral33x.svg' /> is bounded, then restricting to these
+subspaces defines the <span class='ecti-1000'>components </span>of the spectrum
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='σ#(A ) = σ(A |ℋ# ),
+' class='math-display' src='spectral34x.svg' /><a id='x1-1008r8'></a></div>
+   </td><td class='equation-label'>(8)</td></tr></table>
+<!-- l. 180 --><p class='nopar'>where <img alt='σ#(A)  ' class='math' src='spectral35x.svg' /> is the <span class='ecti-1000'>pure point</span>, <span class='ecti-1000'>absolutely continuous </span>or <span class='ecti-1000'>singular continuous </span>spectrum of
+<img alt='A  ' class='math' src='spectral36x.svg' />.
+</p><!-- l. 185 --><p class='indent'>   From a slightly different perspective, we can define the <span class='ecti-1000'>discrete spectrum </span><img alt='σdis(A)  ' class='math' src='spectral37x.svg' /> as the
+set of isolated eigenvalues of finite multiplicity of <img alt='A  ' class='math' src='spectral38x.svg' />. An isolated eigenvalue <img alt='λ  ' class='math' src='spectral39x.svg' /> of <img alt='A  ' class='math' src='spectral40x.svg' /> is one
+for which there exists <img alt='𝜖 &gt; 0  ' class='math' src='spectral41x.svg' /> such that <img alt='σ (A )∩ (λ − 𝜖,λ + 𝜖) = {λ} ' class='math' src='spectral42x.svg' /> and any isolated point
+in the spectrum is always an eigenvalue. The complement of <img alt='σdis(A )  ' class='math' src='spectral43x.svg' /> in <img alt='σ(A)  ' class='math' src='spectral44x.svg' />,
+denoted by <img alt='σess(A)  ' class='math' src='spectral45x.svg' />, is called the <span class='ecti-1000'>essential spectrum</span>. It can easily be shown that the
+pure point spectrum is equal to the closure of the set of eigenvalues of <img alt='A  ' class='math' src='spectral46x.svg' /> and so
+<img alt='σdis(A) ⊂ σpp(A )  ' class='math' src='spectral47x.svg' />.
+</p><!-- l. 200 --><p class='indent'>   We can produce a finer  <a href='https://en.wikipedia.org/wiki/Spectrum_(functional_analysis)#Classification_of_points_in_the_spectrum'>classification of spectra</a>, and even more so for an unbounded
+operator, but we stop here since this is enough to already confuse oneself and is sufficient for
+the few examples that follow.
+</p><!-- l. 207 --><p class='noindent'>
+</p>
+   <h3 class='sectionHead' id='illustration'><span class='titlemark'>2   </span> <a id='x1-20002'></a>Illustration</h3>
+<!-- l. 209 --><p class='noindent'>Consider the graph (also discrete, finite-difference) Laplacian <img alt='           2
+Δ : 𝒟 (Δ ) → ℓ(G)  ' class='math' src='spectral48x.svg' /> for
+<img alt='      d
+G = Z  ' class='math' src='spectral49x.svg' />. For a function <img alt='ψ ∈ 𝒟 (Δ )  ' class='math' src='spectral50x.svg' /> it is defined as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='           ∑
+(Δψ)(x) =       (ψ(y)− ψ(x)).
+         y:|x−y|=1
+' class='math-display' src='spectral51x.svg' /><a id='x1-2001r9'></a></div>
+   </td><td class='equation-label'>(9)</td></tr></table>
+<!-- l. 217 --><p class='nopar'>This is a bounded operator with <img alt='∥Δ∥ = 4d  ' class='math' src='spectral52x.svg' />. We can compute its spectrum easily by using the
+Fourier transform <img alt='F : ℓ2(Zd) → L2([0,2π]d)  ' class='math' src='spectral53x.svg' /> which is defined as
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='             −d∕2 ∑   −ik⋅x
+(Fψ)(k) = (2π)       e    ψ(x).
+                 x∈Zd
+' class='math-display' src='spectral54x.svg' /><a id='x1-2002r10'></a></div>
+   </td><td class='equation-label'>(10)</td></tr></table>
+<!-- l. 226 --><p class='nopar'>Then by direct computation we can show for any <img alt='ϕ ∈ L2 ([0,2π]d)  ' class='math' src='spectral55x.svg' /> that
+</p>
+   <div class='align'><img alt='pict' src='spectral56x.svg' /><a id='x1-2003r11'></a><a id='x1-2004r12'></a><a id='x1-2005r13'></a><a id='x1-2006r14'></a></div>
+<!-- l. 301 --><p class='indent'>   Thus <img alt='Δ  ' class='math' src='spectral57x.svg' /> is unitarily equivalent to a multiplication operator on <img alt='L2 ([0,2π]d)  ' class='math' src='spectral58x.svg' />. Bounded
+multiplication operators have as their spectrum the essential range, which in this case is the
+interval <img alt='[− 4d,0]  ' class='math' src='spectral59x.svg' />. Thus
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='σ(− Δ) = [0,4d].
+' class='math-display' src='spectral60x.svg' /><a id='x1-2007r15'></a></div>
+   </td><td class='equation-label'>(15)</td></tr></table>
+<!-- l. 309 --><p class='nopar'>The Laplacian does not have eigenvectors (although the plane waves can be seen as
+“generalized” eigenvectors). In fact, with a bit of work, we can show that <img alt='μψ = μaψc  ' class='math' src='spectral61x.svg' /> for all
+<img alt='ψ ∈ ℓ2(Zd )  ' class='math' src='spectral62x.svg' />. This implies that the whole spectrum is essential:
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='σ(− Δ) = σac(− Δ ) = σess(− Δ) = [0,4d].
+' class='math-display' src='spectral63x.svg' /><a id='x1-2008r16'></a></div>
+   </td><td class='equation-label'>(16)</td></tr></table>
+<!-- l. 321 --><p class='nopar'>
+</p><!-- l. 323 --><p class='indent'>   Now consider a multiplication operator on <img alt='ℓ2(Zd)  ' class='math' src='spectral64x.svg' /> defined by some real-valued function
+<img alt='V ∈ L∞ (Zd)  ' class='math' src='spectral65x.svg' />. The spectral measure only has pure point part, given by a sum of Dirac
+measures
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='μ = μpp = ∑   |ψ (x)|2δ   .
+ ψ    ψ      d       V(x)
+          x∈Z
+' class='math-display' src='spectral66x.svg' /><a id='x1-2009r17'></a></div>
+   </td><td class='equation-label'>(17)</td></tr></table>
+<!-- l. 331 --><p class='nopar'>Its eigenvectors consist of the localized functions <img alt='     2  d
+δx ∈ ℓ (Z )  ' class='math' src='spectral67x.svg' /> with corresponding eigenvalues
+<img alt='V (x)  ' class='math' src='spectral68x.svg' /> with <img alt='    d
+x ∈ Z  ' class='math' src='spectral69x.svg' />. The closure of the eigenvalues gives the pure point spectrum. We require
+more information on the function <img alt='V  ' class='math' src='spectral70x.svg' /> to determine the nature of the discrete and essential
+spectrum. By definition we know that the essential spectrum will consist of all infinitely
+degenerate eigenvalues <img alt='V(x)  ' class='math' src='spectral71x.svg' /> along with the accumulation points of the full set of
+eigenvalues.
+                                                                         
+
+                                                                         
+</p><!-- l. 343 --><p class='noindent'>
+</p>
+   <h4 class='subsectionHead' id='anderson-localization'><span class='titlemark'>2.1   </span> <a id='x1-30002.1'></a>Anderson localization</h4>
+<!-- l. 345 --><p class='noindent'>Now consider the Schrödinger operator <img alt='H  = − Δ + V  ' class='math' src='spectral72x.svg' />, where <img alt='V  ' class='math' src='spectral73x.svg' /> is a multiplication operator
+whose action is to multiply a function <img alt='ψ  ' class='math' src='spectral74x.svg' /> by an IID random variable with density <img alt='ν  ' class='math' src='spectral75x.svg' /> at each
+point of <img alt=' d
+Z  ' class='math' src='spectral76x.svg' />. To be very precise requires defining the appropriate measure spaces but
+we will ignore this, and only note that with a little ergodic theory one can show
+that
+</p>
+   <table class='equation'><tr><td>
+   <div class='math-display'>
+<img alt='σ(H ) = [0,4d]+ supp ν,
+' class='math-display' src='spectral77x.svg' /><a id='x1-3001r18'></a></div>
+   </td><td class='equation-label'>(18)</td></tr></table>
+<!-- l. 355 --><p class='nopar'>with probability one. The model described by the random Schrödinger operator <img alt='H  ' class='math' src='spectral78x.svg' /> is
+well-known as the <span class='ecti-1000'>Anderson tight-binding model </span>on the “lattice” <img alt='Zd  ' class='math' src='spectral79x.svg' />. It describes a simplified
+picture (no particle interactions) of the transport of an electron in a disordered medium,
+e.g. in an impure crystal. Originally introduced by P. W. Anderson in 1958, it has
+stimulated intense research in both solid state physics and more recently (through
+generalizations of course) to condensed matter theory. The physicists have “known”
+much about this model for a long time but somewhat surprisingly, there are still
+many outstanding mathematical conjectures. The main phenomenon studied in
+these models is that of <span class='ecti-1000'>localization</span>. Roughly speaking, in a periodic crystal, one
+expects electronic conductance, but the inclusion of disorder through these random
+potentials can create an effect due to interference (also only conjectured), in which
+the eigenfunctions of <img alt='H  ' class='math' src='spectral80x.svg' /> become exponentially localized in the lattice. A common
+consequence of this is that diffusion (as measured by the spreading of the wave
+function) under the time evolution <img alt='e−itH  ' class='math' src='spectral81x.svg' /> is suppressed and conductance no longer
+occurs.
+</p><!-- l. 380 --><p class='indent'>   For the one dimensional lattice, <img alt='H  ' class='math' src='spectral82x.svg' /> has pure point spectrum with exponential
+localization occurring for all strengths of disorder. For <img alt='d ≥ 2  ' class='math' src='spectral83x.svg' />, pure point spectra
+with exponential eigenfunctions have been proven to exist at the “band edges”, i.e.,
+at the extremes of the spectrum, and an entirely pure point spectrum holds for
+sufficiently strong disorder. It is conjectured that for <img alt='d = 2  ' class='math' src='spectral84x.svg' /> there is no absolutely
+continuous part, but proof of the emptiness of <img alt='σac(H)  ' class='math' src='spectral85x.svg' /> is still wanting! Note that for the
+one-dimensional lattice, <img alt='σ(H) = [0,4]+ supp ν  ' class='math' src='spectral86x.svg' />, and since <img alt='σ(H ) = σpp(H )  ' class='math' src='spectral87x.svg' />, its
+eigenvalues form a dense subset of the spectrum, but no “extended states” exist. Physical
+theory (like the  <a href='https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673'><span class='ecti-1000'>scaling theory</span></a>) and substantial numerical evidence show that a
+“mobility edge”, signalling a phase transition from an insulator to a metal, exists for
+<img alt='d ≥ 3  ' class='math' src='spectral88x.svg' />.
+</p><!-- l. 399 --><p class='indent'>   Things get much more complicated when considering interactions and relatively recent
+results indicating that (many-body) localization is an example of a failure of the  <a href='https://en.wikipedia.org/wiki/Eigenstate_thermalization_hypothesis'><span class='ecti-1000'>eigenstate
+thermalization hypothesis</span></a> have restored an intense interest in the field. As of now rigorous
+results exist only for the simplest of spin chains. Furthermore, the phenomenon of localization
+                                                                         
+
+                                                                         
+has ties to many other areas of research, including percolation theory and most interestingly,
+to the field of quantum chaology!
+</p>
+    
+</body> 
+</html>

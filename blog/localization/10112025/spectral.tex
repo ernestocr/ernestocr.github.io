@@ -1,0 +1,411 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{tgtermes}
+%\usepackage[italic]{mathastext}
+
+%\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{quantikz2}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\dom}{dom}
+
+\DeclareMathOperator{\N}{\mathbf{N}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\Q}{\mathbf{Q}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\F}{\mathbf{F}}
+
+\DeclareMathOperator{\pp}{pp}
+\DeclareMathOperator{\ac}{ac}
+\DeclareMathOperator{\sgc}{sc}
+
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{
+%\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+%\theoremstyle{definition}
+%\newtheorem{defn}{Definition}
+%\newtheorem*{sol}{Solution}
+%\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}
+%\newtheorem{lem}{Lemma}
+%\newtheorem{cor}{Corollary}
+%\newtheorem{exa}{Example}
+%\newtheorem{exeinner}{Exercise}
+%\newenvironment{exe}[1]{%
+%    \IfBlankTF{#1}
+%    {\renewcommand{theexeinner}{\unskip}}
+%    {\renewcommand\theexeinner{#1}}%
+%    \exeinner
+%}{\endexeinner}
+
+\title{A brief note on operator spectra}
+\author{Ernesto}
+
+\begin{document}
+    \maketitle
+
+    I keep forgetting basic definitions pertaining to the
+    spectral theory of self-adjoint operators so I want to
+    keep a few of them here as a reminder. I'll illustrate
+    the concepts with examples arising in the theory of
+    Anderson localization.
+
+    A confusion that can occur especially when studying
+    the physics literature, is that of mixing up the
+    various definitions and nomenclature related to the
+    spectrum of an operator.  For example, the language
+    usually used could leave one confused when meeting an
+    operator $A$ with its spectrum equal to some continuous
+    subset of the real line, yet having only a ``pure point
+    spectrum''.  Additionally, it is common to say an
+    operator has pure point spectrum for both the case in
+    which it is entirely pure point or when it only has
+    non-trivial pure point part (like the Hamiltonian of
+    the hydrogen atom), but not much can be done about this
+    except to pay attention to the context we're in. This
+    post is just a brief recollection of these concepts.
+
+    \section{Bare minimum spectral theory}
+
+    What follows can be found in detail in M. Aizenman and
+    S.  Warzel's \textit{Random Operators}. A lot of the
+    following definitions apply to some broader class of
+    linear operators, but we will implicitly assume that we
+    deal with self-adjoint operators. Let $A :
+    \mathcal{D}(A) \to \mathcal{H}$ be a densely defined
+    self-adjoint operator on some Hilbert space
+    $\mathcal{H}$. The \textit{resolvent set} is defined as
+    \begin{equation}
+        \rho(A)
+        := \{z \in \C : (A - z I) : \mathcal{D}(A) \to
+        \mathcal{H} \text{ is bijective}\},
+    \end{equation}
+    and the inverse $(A - z I)^{-1}$ is called \textit{the
+    resolvent}. The \textit{spectrum} of $A$ is $\sigma(A)
+    := \C \setminus \rho(A)$, which is a closed subset of
+    the real line. It can be shown that for any $\psi \in
+    \mathcal{H}$ the function defined by
+    \begin{equation}
+        F_\psi(z)
+        := \langle \psi, (A-zI)^{-1} \psi \rangle
+    \end{equation}
+    is a \textit{Herglotz-Pick} function, which means that
+    it is a holomorphic function $F_\psi : \C^{+} \to
+    \C^{+}$ from the upper-half plane into itself. There is
+    a representation theorem for these types of functions
+    which states that there exists a unique finite Borel
+    measure $\mu_\psi$ on $\R$ called the \textit{spectral
+    measure of $A$} associated to $\psi$, which satisfies
+    \begin{equation}
+        F_\psi(z)
+        = \int_{\R} \frac{1}{\lambda - z} \,
+        \mu_\psi(d\lambda).
+    \end{equation} 
+    By polarization we obtain a complex finite Borel measure
+    $\mu_{\phi,\psi}$, which can be used to define a
+    functional calculus for bounded functions $f \in
+    L^{\infty}(\R)$ satisfying
+    \begin{equation}
+        \langle \phi, f(A) \psi \rangle
+        = \int_{\R} f(\lambda) \, \mu_{\phi,\psi}(d\lambda),
+        \quad
+        \forall \phi,\psi \in \mathcal{H}.
+    \end{equation}
+    Of course the characteristic functions $\chi_{B}$ are
+    bounded for any Borel set $B \in \mathcal{B}$ and can be
+    used to define orthogonal projections $P_A(B)$. The map
+    $P_A : \mathcal{B} \to \mathcal{L}(\mathcal{H})$ defined
+    in this manner is a \textit{projection-valued measure}.
+    The spectral theorem guarantees a correspondence
+    between these projection-valued measures and
+    self-adjoint operators on $\mathcal{H}$. In particular
+    we have $\mu_{\phi,\psi}(B) = \langle \phi, P_A(B) \psi
+    \rangle$.
+
+    Having such a Borel measure $\mu$, \href{
+        https://en.wikipedia.org/wiki/Lebesgue%27s_decomposition_theorem
+    }{Lebesgue's decomposition theorem} states that $\mu$
+    can be decomposed with respect to the Lebesgue measure
+    into three mutually singular parts:
+    \begin{equation}
+        \mu
+        = \mu^{\pp} + \mu^{\ac} + \mu^{\sgc},
+    \end{equation}
+    known as the \textit{pure point} part, the
+    \textit{absolutely continuous} part and the
+    \textit{singular continuous} part, respectively.
+    Occasionally one calls these parts, spectral components.
+    Using these components, we can define the closed
+    subspaces
+    \begin{equation}
+        \mathcal{H}^{\#}
+        = \left\{
+            \psi \in \mathcal{H} : \mu_\psi =
+            \mu_\psi^{\#}
+        \right\},
+    \end{equation}
+    where $\#$ is $\pp, \ac$ or $\sgc$. It turns out that
+    the Hilbert space can be decomposed as a direct sum of
+    these subspaces:
+    \begin{equation}
+        \mathcal{H}
+        = \mathcal{H}^{\pp} \oplus
+        \mathcal{H}^{\ac} \oplus
+        \mathcal{H}^{\sgc},
+    \end{equation}
+    with each summand being invariant under $A$. If $A$ is
+    bounded, then restricting to these subspaces defines the
+    \textit{components} of the spectrum
+    \begin{equation}
+        \sigma^{\#}(A)
+        = \sigma\left( A\big|_{\mathcal{H}^{\#}} \right),
+    \end{equation}
+    where $\sigma^{\#}(A)$ is the \textit{pure point},
+    \textit{absolutely continuous} or \textit{singular
+    continuous} spectrum of $A$. 
+
+    From a slightly different perspective, we can define
+    the \textit{discrete spectrum} $\sigma_{\text{dis}}(A)$
+    as the set of isolated eigenvalues of finite
+    multiplicity of $A$. An isolated eigenvalue $\lambda$ of
+    $A$ is one which there exists $\epsilon > 0$ such that
+    $\sigma(A) \cap (\lambda - \epsilon, \lambda + \epsilon)
+    = \{\lambda\}$ and any isolated point in the spectrum is
+    always an eigenvalue. The complement of
+    $\sigma_{\text{dis}}(A)$ in $\sigma(A)$, denoted by
+    $\sigma_{\text{ess}}(A)$, is called the
+    \textit{essential spectrum}. It can easily be shown that
+    the pure point spectrum is equal to the closure of the
+    set of eigenvalues of $A$ and so
+    $\sigma_{\text{dis}}(A) \subset \sigma^{\pp}(A)$.
+
+    We can produce a finer
+    \href{https://en.wikipedia.org/wiki/Spectrum_(functional_analysis)#Classification_of_points_in_the_spectrum}{classification
+    of spectra}, and
+    even more so for an unbounded operator, but we stop here
+    since this is enough to already confuse oneself and is
+    sufficient for the few examples that follow.
+
+    \section{Illustration}
+
+    Consider the graph (also discrete, finite-difference)
+    Laplacian $\Delta : \mathcal{D}(\Delta) \to
+    \ell^2(G)$ for $G = \Z^{d}$. For a function $\psi \in
+    \mathcal{D}(\Delta)$ it is defined as
+    \begin{equation}
+        (\Delta \psi)(x)
+        = \sum_{y : |x-y|=1}^{} 
+        (\psi(y) - \psi(x)).
+    \end{equation}
+    This is a bounded operator with $\|\Delta\| = 4d$. We
+    can compute its spectrum easily by using the Fourier
+    transform $F : \ell^2(\Z^{d}) \to L^2([0,2\pi]^{d})$ 
+    which is defined as
+    \begin{equation}
+        (F\psi)(k)
+        = (2\pi)^{-d / 2} 
+        \sum_{x \in \Z^{d}}^{} e^{-i k \cdot x} \psi(x).
+    \end{equation}
+    Then by direct computation we can show for any $\phi \in
+    L^2([0,2\pi]^{d})$ that
+    \begin{align}
+        (F \Delta & F^{-1} \phi)(k) \\
+        %&= (2\pi)^{-d / 2} \sum_{x \in \Z^{d}}^{} 
+        %e^{-i k \cdot x} (\Delta F^{-1} \phi)(x) \\
+        &= (2\pi)^{-d / 2} \sum_{x \in \Z^{d}}^{} 
+        e^{-i k \cdot x} \left\{ 
+            \sum_{y : |x-y| = 1}^{} \left[
+                (F^{-1}\phi)(y) - (F^{-1}\phi)(x)
+            \right]
+        \right\} \\
+        %&= (2\pi)^{-d / 2} \sum_{x \in \Z^{d}}^{} 
+        %e^{-i k \cdot x} \left\{
+        %    \sum_{j=1}^{d} \left[
+        %        (F^{-1}\phi)(x + e_j)
+        %        + (F^{-1}\phi)(x - e_j)
+        %    \right] - 2d (F^{-1}\phi)(x)
+        %\right\} \\
+        %&= (2\pi)^{-d} \sum_{x \in \Z^{d}}^{} 
+        %e^{-i k \cdot x}
+        %\left\{
+        %    \sum_{j=1}^{d} \left[
+        %        \int_{[0,2\pi]^{d}} e^{i w \cdot (x+e_j)}
+        %        \phi(w) \, dw
+        %        +
+        %        \int_{[0,2\pi]^{d}} e^{i w \cdot (x-e_j)}
+        %        \phi(w) \, dw
+        %    \right]
+        %    - 2d \int_{[0,2\pi]^{d}} e^{iw \cdot x} \phi(w)
+        %    \, dw
+        %\right\} \\
+        %&= (2\pi)^{-d} \int_{[0,2\pi]^{d}} \sum_{x \in
+        %\Z^{d}}^{} \left\{ e^{-i k \cdot x} 
+        %\sum_{j=1}^{d}
+        %\left[e^{iw \cdot (x + e_j)} + e^{iw
+        %\cdot (x - e_j)}\right] \phi(w)
+        %- 2d e^{i w \cdot x} \phi(w) 
+        %\right\} \, dw \\
+        %&= (2\pi)^{-d} \int_{[0,2\pi]^{d}} \sum_{x \in
+        %\Z^{d}}^{} \left\{ e^{-i k \cdot x} 
+        %\sum_{j=1}^{d}
+        %\left[
+        %    e^{iw \cdot x} (e^{iw \cdot e_j} + e^{-iw \cdot
+        %    e_j})
+        %\right] \phi(w)
+        %- 2d e^{i w \cdot x} \phi(w) 
+        %\right\} \, dw \\
+        &= (2\pi)^{-d} \int_{[0,2\pi]^{d}} \sum_{x \in
+        \Z^{d}}^{} \left\{ e^{-i k \cdot x} e^{i w \cdot x}
+        \left(
+            \sum_{j=1}^{d}
+            \left[
+                2 \cos(w \cdot e_j)
+            \right]
+            - 2d 
+        \right) \phi(w)
+        \right\} \, dw \\
+        %&= (2\pi)^{-d} \int_{[0,2\pi]^{d}}
+        %2 \left( 
+        %    \sum_{j=1}^{d}
+        %    \left[
+        %        \cos(w \cdot e_j)
+        %    \right]
+        %    - d
+        %\right) \left(
+        %    \sum_{x \in \Z^{d}}^{} e^{i(w - k) \cdot x} 
+        %\right) \phi(w) \, dw \\
+        %&= \int_{[0,2\pi]^2} 2 \sum_{j=1}^{d} [\cos(w \cdot
+        %e_j) - 1] \delta(w-k) \phi(w) \, dw \\
+        &= \left(
+            2 \sum_{j=1}^{d} [\cos(k \cdot e_j) - 1]
+        \right) \phi(k).
+    \end{align}
+    Thus $\Delta$ is unitarily equivalent to a
+    multiplication operator on $L^2([0,2\pi]^{d})$.
+    Bounded multiplication operators have as their spectrum
+    the essential range, which in this case is the interval
+    $[-4d,0]$.  Thus 
+    \begin{equation}
+        \sigma(-\Delta)
+        = [0,4d].
+    \end{equation}
+    The Laplacian does not have eigenvectors (although the
+    plane waves can be seen as ``generalized''
+    eigenvectors).  In fact, with a bit of work, we can show
+    that $\mu_\psi = \mu_\psi^{\ac}$ for all $\psi \in
+    \ell^2(\Z^{d})$. This implies that the whole spectrum is
+    essential:
+    \begin{equation}
+        \sigma(-\Delta)
+        = \sigma^{\ac}(-\Delta)
+        = \sigma_{\text{ess}}(-\Delta)
+        = [0,4d].
+    \end{equation}
+    
+    Now consider a multiplication operator on
+    $\ell^2(\Z^{d})$ defined by some real-valued function $V
+    \in L^{\infty}(\Z^{d})$. The spectral measure only has
+    pure point part, given by a sum of Dirac measures
+    \begin{equation}
+        \mu_\psi
+        = \mu_\psi^{\pp}
+        = \sum_{x \in \Z^{d}}^{} |\psi(x)|^2 \delta_{V(x)}.
+    \end{equation}
+    Its eigenvectors consist of the localized functions
+    $\delta_x \in \ell^2(\Z^{d})$ with corresponding
+    eigenvalues $V(x)$ with $x \in \Z^{d}$. The closure of
+    the eigenvalues gives the pure point spectrum. We
+    require more information on the function $V$ to
+    determine the nature of the discrete and essential
+    spectrum. By definition we know that the essential
+    spectrum will consist of all infinitely degenerate
+    eigenvalues $V(x)$ along with the accumulation points of
+    the full set of eigenvalues.
+
+    \subsection{Anderson localization}
+
+    Now consider the Schrödinger operator $H = -\Delta + V$,
+    where $V$ is a multiplication operator whose action is
+    to multiply a function $\psi$ by an IID random variable
+    with density $\nu$ at each point of $\Z^{d}$.  To be
+    very precise requires defining the appropriate measure
+    spaces but we will ignore this, and only note that with
+    a little ergodic theory one can show that
+    \begin{equation}
+        \sigma(H)
+        = [0,4d] + \text{supp } \nu,
+    \end{equation}
+    with probability one. The model described by the random
+    Schrödinger operator $H$ is well-known as the
+    \textit{Anderson tight-binding model} on the ``lattice''
+    $\Z^{d}$. It describes a simplified picture (no
+    particle interactions) of the transport of an electron
+    in a disordered medium, e.g. in an impure crystal.
+    Originally introduced by P. W.  Anderson in 1958, it has
+    stimulated intense research in both solid state physics
+    and more recently (through generalizations of course) to
+    condensed matter theory.  The physicists have ``known''
+    much about this model for a long time but somewhat
+    surprisingly, there are still many outstanding
+    mathematical conjectures. The main phenomenon studied in
+    these models is that of \textit{localization}. Roughly
+    speaking, in a periodic crystal, one expects electronic
+    conductance, but the inclusion of disorder through these
+    random potentials can create an effect due to
+    interference (also only conjectured), in which the
+    eigenfunctions of $H$ become exponentially localized in
+    the lattice. A common consequence of this is that
+    diffusion (as measured by the spreading of the wave
+    function) under the time evolution $e^{-it H}$ is
+    suppressed and conductance no longer occurs.
+
+    For the one dimensional lattice, $H$ has pure point
+    spectrum with exponential localization occurring for all
+    strengths of disorder. For $d \ge 2$, pure point spectra
+    with exponential eigenfunctions have been proven to
+    exist at the ``band edges'', i.e., at the extremes of
+    the spectrum, and an entirely pure point spectrum holds
+    for sufficiently strong disorder. It is conjectured that
+    for $d = 2$ there is no absolutely continuous part, but
+    proof of the emptiness of $\sigma^{\ac}(H)$ is still
+    wanting! Note that for the one-dimensional lattice,
+    $\sigma(H) = [0,4] + \text{supp } \nu$, and since
+    $\sigma(H) = \sigma^{\pp}(H)$, its eigenvalues form a
+    dense subset of the spectrum, but no ``extended states''
+    exist. Physical theory (like the
+    \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.42.673}{\textit{scaling
+    theory}}) and substantial numerical evidence show that a
+    ``mobility edge'', signalling a phase transition from an
+    insulator to a metal, exists for $d \geq 3$.
+
+    Things get much more complicated when considering
+    interactions and relatively recent results indicating
+    that (many-body) localization is an example of a
+    failure of the
+    \href{https://en.wikipedia.org/wiki/Eigenstate_thermalization_hypothesis}{\textit{eigenstate thermalization
+    hypothesis}} have restored an intense interest in the
+    field. As of now rigorous results exist only for the
+    simplest of spin chains. Furthermore, the phenomenon of
+    localization has ties to many other areas of research,
+    including percolation theory and most interestingly, to
+    the field of quantum chaology!
+
+\end{document}

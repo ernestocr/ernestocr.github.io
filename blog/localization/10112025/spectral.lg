@@ -1,0 +1,379 @@
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: spectral.html
+File: spectral.css
+File: spectral.tmp
+File: spectral.tmp
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: table.tabular{border-collapse: collapse; border-spacing: 0;}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
+Css: body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+Css: h1,h2,h3,h4,h5 { line-height:1.2; }
+Css: @media print{ body{ max-width:none } }
+Css: .partHead, .likepartHead { font-size: 2em; }
+Css: .chapterHead, .likechapterHead { font-size: 1.7411em; }
+Css: .sectionHead, .likesectionHead { font-size: 1.5157em; }
+Css: .subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
+Css:  @media (prefers-color-scheme: dark) { img[src^="spectral"]{filter: invert(1); } } 
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p:first-child{ margin-bottom:0; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: div.newtheorem .head{font-weight: bold;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: code.verb{font-family:monospace,monospace;}
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .hline {border-top: 1px solid black;}
+Css: .hline + .vspace:last-child{display:none;}
+Css: .hline:first-child{border-bottom:1px solid black;border-top:none;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
+Css: .subsectionToc, .likesubsectionToc {margin-left:1em;}
+Css: .subsubsectionToc, .likesubsubsectionToc {margin-left:2em;}
+Css: .paragraphToc, .likeparagraphToc {margin-left:3em;}
+Css: .subparagraphToc, .likesubparagraphToc {margin-left:4em;}
+Css: figure.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: figure.figure {text-align:center;}
+Css: figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+Css: figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: p + figcaption, img + figcaption{margin-top: 1em;}
+Css: .abstract{margin:1em;}
+Css: .equation td{text-align:center; }
+Css: .equation-star td{text-align:center; }
+Css: table.equation-star { width:100%; }
+Css: table.equation { width:100%; }
+Css: div.align {text-align: center;}
+Css: table.multline, table.multline-star {width:100%;}
+Css: td.gather {text-align:center; }
+Css: table.gather {width:100%;}
+Css: div.gather-star {text-align:center;}
+Css: img[src="spectral0x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[2] ==> spectral0x.svg ---
+Css: img[src="spectral1x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[3] ==> spectral1x.svg ---
+Css: img[src="spectral2x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[4] ==> spectral2x.svg ---
+--- needs --- spectral.idv[5] ==> spectral3x.svg ---
+Css: img[src="spectral4x.svg"]{vertical-align:-23.49617455776167%}
+--- needs --- spectral.idv[7] ==> spectral4x.svg ---
+Css: img[src="spectral5x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[8] ==> spectral5x.svg ---
+Css: img[src="spectral6x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[9] ==> spectral6x.svg ---
+Css: img[src="spectral7x.svg"]{vertical-align:-21.87498927115985%}
+--- needs --- spectral.idv[10] ==> spectral7x.svg ---
+--- needs --- spectral.idv[12] ==> spectral8x.svg ---
+Css: img[src="spectral9x.svg"]{vertical-align:-24.69998392888663%}
+--- needs --- spectral.idv[14] ==> spectral9x.svg ---
+Css: img[src="spectral10x.svg"]{vertical-align:-39.92232877412322%}
+--- needs --- spectral.idv[15] ==> spectral10x.svg ---
+Css: img[src="spectral11x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[16] ==> spectral11x.svg ---
+Css: img[src="spectral12x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[17] ==> spectral12x.svg ---
+Css: img[src="spectral13x.svg"]{vertical-align:-21.87498927115985%}
+--- needs --- spectral.idv[18] ==> spectral13x.svg ---
+--- needs --- spectral.idv[19] ==> spectral14x.svg ---
+Css: img[src="spectral15x.svg"]{vertical-align:-39.92232877412322%}
+--- needs --- spectral.idv[21] ==> spectral15x.svg ---
+Css: img[src="spectral16x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[22] ==> spectral16x.svg ---
+--- needs --- spectral.idv[23] ==> spectral17x.svg ---
+Css: img[src="spectral18x.svg"]{vertical-align:-31.11115993935533%}
+--- needs --- spectral.idv[25] ==> spectral18x.svg ---
+Css: img[src="spectral19x.svg"]{vertical-align:-5.411964490517498%}
+--- needs --- spectral.idv[26] ==> spectral19x.svg ---
+Css: img[src="spectral20x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[27] ==> spectral20x.svg ---
+Css: img[src="spectral21x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[28] ==> spectral21x.svg ---
+Css: img[src="spectral22x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[29] ==> spectral22x.svg ---
+Css: img[src="spectral23x.svg"]{vertical-align:-27.61375150215604%}
+--- needs --- spectral.idv[30] ==> spectral23x.svg ---
+Css: img[src="spectral24x.svg"]{vertical-align:-31.11115993935533%}
+--- needs --- spectral.idv[31] ==> spectral24x.svg ---
+Css: img[src="spectral25x.svg"]{vertical-align:-31.11115993935533%}
+--- needs --- spectral.idv[33] ==> spectral25x.svg ---
+--- needs --- spectral.idv[34] ==> spectral26x.svg ---
+--- needs --- spectral.idv[36] ==> spectral27x.svg ---
+Css: img[src="spectral28x.svg"]{vertical-align:-21.87485516040931%}
+--- needs --- spectral.idv[38] ==> spectral28x.svg ---
+Css: img[src="spectral29x.svg"]{vertical-align:-31.11115993935533%}
+--- needs --- spectral.idv[39] ==> spectral29x.svg ---
+Css: img[src="spectral30x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[40] ==> spectral30x.svg ---
+--- needs --- spectral.idv[42] ==> spectral31x.svg ---
+Css: img[src="spectral32x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[44] ==> spectral32x.svg ---
+Css: img[src="spectral33x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[45] ==> spectral33x.svg ---
+--- needs --- spectral.idv[46] ==> spectral34x.svg ---
+Css: img[src="spectral35x.svg"]{vertical-align:-22.74790973034065%}
+--- needs --- spectral.idv[48] ==> spectral35x.svg ---
+Css: img[src="spectral36x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[49] ==> spectral36x.svg ---
+Css: img[src="spectral37x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[50] ==> spectral37x.svg ---
+Css: img[src="spectral38x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[51] ==> spectral38x.svg ---
+Css: img[src="spectral39x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[52] ==> spectral39x.svg ---
+Css: img[src="spectral40x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[53] ==> spectral40x.svg ---
+Css: img[src="spectral41x.svg"]{vertical-align:-5.719853738899826%}
+--- needs --- spectral.idv[54] ==> spectral41x.svg ---
+Css: img[src="spectral42x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[55] ==> spectral42x.svg ---
+Css: img[src="spectral43x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[56] ==> spectral43x.svg ---
+Css: img[src="spectral44x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[57] ==> spectral44x.svg ---
+Css: img[src="spectral45x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[58] ==> spectral45x.svg ---
+Css: img[src="spectral46x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[59] ==> spectral46x.svg ---
+Css: img[src="spectral47x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[60] ==> spectral47x.svg ---
+Css: img[src="spectral48x.svg"]{vertical-align:-23.49617455776167%}
+--- needs --- spectral.idv[62] ==> spectral48x.svg ---
+Css: img[src="spectral49x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[63] ==> spectral49x.svg ---
+Css: img[src="spectral50x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[64] ==> spectral50x.svg ---
+--- needs --- spectral.idv[66] ==> spectral51x.svg ---
+Css: img[src="spectral52x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[68] ==> spectral52x.svg ---
+Css: img[src="spectral53x.svg"]{vertical-align:-21.27656811449661%}
+--- needs --- spectral.idv[69] ==> spectral53x.svg ---
+--- needs --- spectral.idv[70] ==> spectral54x.svg ---
+Css: img[src="spectral55x.svg"]{vertical-align:-22.74790973034065%}
+--- needs --- spectral.idv[72] ==> spectral55x.svg ---
+--- needs --- spectral.idv[73] ==> spectral56x.svg ---
+Css: img[src="spectral57x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[74] ==> spectral57x.svg ---
+Css: img[src="spectral58x.svg"]{vertical-align:-22.74790973034065%}
+--- needs --- spectral.idv[75] ==> spectral58x.svg ---
+Css: img[src="spectral59x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[76] ==> spectral59x.svg ---
+--- needs --- spectral.idv[78] ==> spectral60x.svg ---
+Css: img[src="spectral61x.svg"]{vertical-align:-38.69686318908171%}
+--- needs --- spectral.idv[80] ==> spectral61x.svg ---
+Css: img[src="spectral62x.svg"]{vertical-align:-21.27656811449661%}
+--- needs --- spectral.idv[81] ==> spectral62x.svg ---
+--- needs --- spectral.idv[82] ==> spectral63x.svg ---
+Css: img[src="spectral64x.svg"]{vertical-align:-21.27656811449661%}
+--- needs --- spectral.idv[84] ==> spectral64x.svg ---
+Css: img[src="spectral65x.svg"]{vertical-align:-21.27656811449661%}
+--- needs --- spectral.idv[85] ==> spectral65x.svg ---
+--- needs --- spectral.idv[86] ==> spectral66x.svg ---
+Css: img[src="spectral67x.svg"]{vertical-align:-21.27656811449661%}
+--- needs --- spectral.idv[88] ==> spectral67x.svg ---
+Css: img[src="spectral68x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[89] ==> spectral68x.svg ---
+Css: img[src="spectral69x.svg"]{vertical-align:-4.055350156370681%}
+--- needs --- spectral.idv[90] ==> spectral69x.svg ---
+Css: img[src="spectral70x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[91] ==> spectral70x.svg ---
+Css: img[src="spectral71x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[92] ==> spectral71x.svg ---
+Css: img[src="spectral72x.svg"]{vertical-align:-10.86953493046945%}
+--- needs --- spectral.idv[94] ==> spectral72x.svg ---
+Css: img[src="spectral73x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[95] ==> spectral73x.svg ---
+Css: img[src="spectral74x.svg"]{vertical-align:-21.87498927115985%}
+--- needs --- spectral.idv[96] ==> spectral74x.svg ---
+Css: img[src="spectral75x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[97] ==> spectral75x.svg ---
+Css: img[src="spectral76x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[98] ==> spectral76x.svg ---
+--- needs --- spectral.idv[99] ==> spectral77x.svg ---
+Css: img[src="spectral78x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[101] ==> spectral78x.svg ---
+Css: img[src="spectral79x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[102] ==> spectral79x.svg ---
+Css: img[src="spectral80x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[103] ==> spectral80x.svg ---
+Css: img[src="spectral81x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[104] ==> spectral81x.svg ---
+Css: img[src="spectral82x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[105] ==> spectral82x.svg ---
+Css: img[src="spectral83x.svg"]{vertical-align:-16.37386282411006%}
+--- needs --- spectral.idv[106] ==> spectral83x.svg ---
+Css: img[src="spectral84x.svg"]{vertical-align:-0%}
+--- needs --- spectral.idv[107] ==> spectral84x.svg ---
+Css: img[src="spectral85x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[108] ==> spectral85x.svg ---
+Css: img[src="spectral86x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[109] ==> spectral86x.svg ---
+Css: img[src="spectral87x.svg"]{vertical-align:-25%}
+--- needs --- spectral.idv[110] ==> spectral87x.svg ---
+Css: img[src="spectral88x.svg"]{vertical-align:-16.37386282411006%}
+--- needs --- spectral.idv[112] ==> spectral88x.svg ---
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","5","5","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("ecrm","1000","10","100")
+Font("ecrm","1728","17","100")
+Font("ecrm","1200","12","100")
+Font("cmbx","10","10","100")
+Font("cmbx","7","7","100")
+Font("ecti","1000","10","100")
+Font("ecrm","0700","7","100")
